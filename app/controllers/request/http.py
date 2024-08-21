@@ -20,5 +20,4 @@ def http_request():
     headers = data.get("headers")
     r = Request(url, data=body, headers=headers)
     response = r.request(method)
-    # return jsonify(dict(code=0, data=response, msg="操作成功了"))
-    return 0
+    return jsonify(dict(code=0, data=response, msg="操作成功了"))
