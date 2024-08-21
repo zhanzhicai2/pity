@@ -1,0 +1,52 @@
+[2024-08-19 09:41:21.345792] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 09:47:21.921433] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 09:47:22.286159] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 09:47:22.486034] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 09:47:22.675744] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 09:47:22.794617] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 09:47:22.998142] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 09:49:06.733924] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 09:49:06.949776] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 09:49:07.088544] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 09:49:07.342040] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 09:49:07.462770] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 17:49:23.966609] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 17:49:24.164300] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 17:49:24.414381] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 17:49:24.615182] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 17:49:24.836214] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 17:49:24.981981] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 17:58:17.904588] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 17:58:19.707691] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 18:04:22.177943] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 19:02:11.314213] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 19:02:13.074789] INFO: hello world专用: 有人访问你的网站了
+[2024-08-19 20:07:19.000267] INFO: UserDao: 有人访问你的网站了
+[2024-08-19 20:07:19.355921] INFO: UserDao: 有人访问你的网站了
+[2024-08-19 20:07:19.602647] INFO: UserDao: 有人访问你的网站了
+[2024-08-19 20:07:19.803450] INFO: UserDao: 有人访问你的网站了
+[2024-08-19 20:07:20.094559] INFO: UserDao: 有人访问你的网站了
+[2024-08-19 20:07:20.315951] INFO: UserDao: 有人访问你的网站了
+[2024-08-19 20:07:40.735924] INFO: UserDao: 有人访问你的网站了
+[2024-08-19 20:22:17.383449] ERROR: UserDao: 用户注册失败: 用户名或邮箱已存在
+[2024-08-19 20:22:34.524000] ERROR: UserDao: 用户注册失败: 用户名或邮箱已存在
+[2024-08-19 20:22:45.420494] ERROR: UserDao: 用户注册失败: 用户名或邮箱已存在
+[2024-08-19 20:27:56.224145] ERROR: UserDao: 用户注册失败: Unicode-objects must be encoded before hashing
+[2024-08-19 20:31:11.662985] ERROR: UserDao: 用户注册失败: (mysql.connector.errors.DataError) 1406 (22001): Data too long for column 'name' at row 1
+[SQL: INSERT INTO user (username, name, password, email, `role`, created_at, updated_at, deleted_at, last_login_at) VALUES (%(username)s, %(name)s, %(password)s, %(email)s, %(role)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(last_login_at)s)]
+[parameters: {'username': '311123', 'name': 'zhan122122121221zhan', 'password': 'dc92c34a5ff7473b166c1bad26fd9b7c', 'email': '12zhan111310@164.com', 'role': 0, 'created_at': datetime.datetime(2024, 8, 19, 20, 31, 11, 656864), 'updated_at': datetime.datetime(2024, 8, 19, 20, 31, 11, 656872), 'deleted_at': None, 'last_login_at': None}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+[2024-08-19 20:31:31.695045] ERROR: UserDao: 用户注册失败: (mysql.connector.errors.DataError) 1406 (22001): Data too long for column 'name' at row 1
+[SQL: INSERT INTO user (username, name, password, email, `role`, created_at, updated_at, deleted_at, last_login_at) VALUES (%(username)s, %(name)s, %(password)s, %(email)s, %(role)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(last_login_at)s)]
+[parameters: {'username': '311', 'name': 'zhan122122121221zhan', 'password': '92152227466766749d9d9da31c41ac1c', 'email': '12zhan111310@164.com', 'role': 0, 'created_at': datetime.datetime(2024, 8, 19, 20, 31, 31, 693796), 'updated_at': datetime.datetime(2024, 8, 19, 20, 31, 31, 693804), 'deleted_at': None, 'last_login_at': None}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+[2024-08-19 20:31:42.124504] ERROR: UserDao: 用户注册失败: (mysql.connector.errors.DataError) 1406 (22001): Data too long for column 'name' at row 1
+[SQL: INSERT INTO user (username, name, password, email, `role`, created_at, updated_at, deleted_at, last_login_at) VALUES (%(username)s, %(name)s, %(password)s, %(email)s, %(role)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(last_login_at)s)]
+[parameters: {'username': '311', 'name': 'zhan122122121221zhan', 'password': '92152227466766749d9d9da31c41ac1c', 'email': '12zhan10@164.com', 'role': 0, 'created_at': datetime.datetime(2024, 8, 19, 20, 31, 42, 123402), 'updated_at': datetime.datetime(2024, 8, 19, 20, 31, 42, 123410), 'deleted_at': None, 'last_login_at': None}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+[2024-08-20 02:42:07.762287] INFO: UserDao: 有人访问你的网站了
+[2024-08-20 02:42:07.985661] INFO: UserDao: 有人访问你的网站了
+[2024-08-20 02:42:08.220734] INFO: UserDao: 有人访问你的网站了
+[2024-08-20 02:42:08.388335] INFO: UserDao: 有人访问你的网站了
+[2024-08-20 15:42:14.418832] ERROR: UserDao: 用户注册失败: 用户名或邮箱已存在
+[2024-08-20 15:48:15.253659] ERROR: UserDao: 用户注册失败: 用户名或邮箱已存在
