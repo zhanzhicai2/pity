@@ -14,7 +14,9 @@ pity.register_blueprint(req)
 @pity.route('/')
 def hello_world():  # put application's code here
     log = Log("hello world专用")
-    log.info("有人访问你的网站了")
+    # log.info("有人访问你的网站了")
+    now = datetime.now().strftime("%Y-%M-%d %H:%M:%S")
+    return now
     return 'Hello World!3344'
 
 
