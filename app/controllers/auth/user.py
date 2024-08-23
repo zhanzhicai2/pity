@@ -5,7 +5,7 @@ from flask import jsonify
 
 from app.controllers.auth.UserDao import UserDao
 from app.middleware.Jwt import UserToken
-from handler.factory import ResponseFactory
+from app.handler.fatcory import ResponseFactory
 
 auth = Blueprint("auth", __name__, url_prefix="/auth")
 
@@ -43,9 +43,18 @@ def login():
         return jsonify(dict(code=110, msg=err))
     user = ResponseFactory.model_to_dict(user, "password")
     token = UserToken.get_token(user)
+    data = dict(token=token, user=user)
     if err is not None:
         return jsonify(dict(code=110, msg=err))
-    return jsonify(dict(code=0, msg="登录成功", data=dict(token=token, user=user)))
+    return jsonify(dict(code=0, msg="登录成功", data=data))
+    # return jsonify(dict(code=0, msg="登录成功"))
+
+    # user = ResponseFactory.model_to_dict(user, "password")
+    # token = UserToken.get_token(user)
+    # if err is not None:
+    #     return jsonify(dict(code=110, msg=err))
+    # # return jsonify(dict(code=0, msg="登录成功", data=dict(token=token, user=user)))
+    # return jsonify((dict(code=0, msg="登陆成功")))
 
 
 

@@ -1,17 +1,12 @@
-# 将日志类改为单例模式(选修课)
-
-"""
-    这是一个装饰器方法文件
-"""
 from functools import wraps
 
+import requests
 from flask import request, jsonify
-
+import json
 from app import pity
 from app.middleware.Jwt import UserToken
 
 FORBIDDEN = "对不起, 你没有足够的权限"
-FAIL = "用户信息认证失败，请检查"
 
 
 class SingletonDecorator:
@@ -31,19 +26,27 @@ def permission(role=pity.config.get("GUEST")):
         def wrapper(*args, **kwargs):
             try:
                 headers = request.headers
-                token =headers.get('token')
+                token = headers.get('token')
+
+                # 跟原作者不一样，所以魔改了
+                roles = headers.get('userrole')
+                data = json.loads(roles)
+                userrole = int(data['role'])
                 if token is None:
-                    return jsonify(dict(code=401,msg=FAIL))
+                    return jsonify(dict(code=401, msg="用户信息认证失败, 请检查"))
+                # user_info = UserToken.parse_token(token)
                 # 这里把user信息写入kwargs
-                user_info = UserToken.parse_token(token)
-                kwargs["user_info"] = user_info
+                # kwargs["user_info"] = user_info
+                kwargs["user_info"] = token
             except Exception as e:
                 return jsonify(dict(code=401, msg=str(e)))
             # 判断用户权限是否足够, 如果不足够则直接返回，不继续
-            if user_info.get("role", 0) < role:
+            # 众多代码跟作者不一样，谨慎学习，不一样的原因是作者的代码取不到请求过来role的值，所以魔改了
+            # if user_info.get("role", 0) < role:
+            if userrole > role:
                 return jsonify(dict(code=400, msg=FORBIDDEN))
             return func(*args, **kwargs)
+
         return wrapper
 
     return login_required
-

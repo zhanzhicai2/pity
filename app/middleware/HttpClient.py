@@ -52,14 +52,12 @@ class Request(object):
 
     @staticmethod
     def response(status, status_code=200, response=None, response_header=None,
-                 request_header=None, cookie=None, elapsed=None, msg="success"):
+                 request_header=None, cookies=None, elapsed=None, msg="success"):
         request_header = {k: v for k, v in request_header.items()} if response_header is not None else {}
         response_header = {k: v for k, v in response_header.items()} if response_header is not None else {}
         cookies = {k: v for k, v in cookies.items()} if cookies is not None else {}
         return {
             "status": status, "response": response, "status_code": status_code,
             "response_header": response_header, "request_header": request_header,
-            "msg": msg, "elapsed": elapsed,"cookies": cookies,
+            "msg": msg, "elapsed": elapsed, "cookies": cookies,
         }
-
-

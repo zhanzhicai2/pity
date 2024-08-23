@@ -9,6 +9,8 @@ class TestCase(db.Model):
     url = db.Column(db.TEXT, nullable=False, comment="请求url")
     request_method = db.Column(db.String(12), nullable=True, comment="请求方式, 如果非http可为空")
     request_header = db.Column(db.TEXT, comment="请求头，可为空")
+    params = db.Column(db.TEXT, comment="请求params")
+    body = db.Column(db.TEXT, comment="请求body")
     project_id = db.Column(db.INT, comment="所属项目")
     tag = db.Column(db.String(64), comment="用例标签")
     status = db.Column(db.INT, comment="用例状态: 1: 待完成 2: 暂时关闭 3: 正常运作")
@@ -19,7 +21,7 @@ class TestCase(db.Model):
     create_user = db.Column(db.INT, nullable=False)
     update_user = db.Column(db.INT, nullable=False)
 
-    def __init__(self, name, request_type, url, project_id, tag, status, expected, create_user, request_header=None,
+    def __init__(self, name, request_type, url, project_id, tag, status, expected, create_user, params,body,request_header=None,
                  request_method=None):
         self.name = name
         self.request_type = request_type
@@ -31,7 +33,8 @@ class TestCase(db.Model):
         self.create_user = create_user
         self.update_user = create_user
         self.request_header = request_header
+        self.params = params
+        self.body = body
         self.request_method = request_method
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
-
