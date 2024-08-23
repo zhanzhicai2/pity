@@ -8,7 +8,7 @@ class ProjectRole(db.Model):
     project_role = db.Column(db.INT, index=True)
     created_at = db.Column(db.DATETIME, nullable=False)
     updated_at = db.Column(db.DATETIME, nullable=False)
-    deleted_at = db.Column(db.DATETIME)
+    deleted_at = db.Column(db.DATETIME)  # 用于标记软删除
     create_user = db.Column(db.INT, nullable=True)
     update_user = db.Column(db.INT, nullable=True)
 
