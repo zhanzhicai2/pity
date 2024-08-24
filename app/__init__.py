@@ -9,3 +9,4 @@ CORS(pity, supports_credentials=True)
 
 pity.config.from_object(Config)
 
+

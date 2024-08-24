@@ -10,8 +10,8 @@ req = Blueprint("request", __name__, url_prefix="/request")
 
 
 @req.route("/http", methods=['POST'])
-@permission(pity.config.get("MANAGER"))
-# @permission()
+# @permission(pity.config.get("GUEST"))
+@permission()
 def http_request(user_info):
 # def http_request():
     data = request.get_json()

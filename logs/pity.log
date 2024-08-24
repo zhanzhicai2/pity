@@ -51,3 +51,96 @@
 [2024-08-20 15:42:14.418832] ERROR: UserDao: 用户注册失败: 用户名或邮箱已存在
 [2024-08-20 15:48:15.253659] ERROR: UserDao: 用户注册失败: 用户名或邮箱已存在
 [2024-08-21 13:43:53.027508] INFO: UserDao: 有人访问你的网站了
+[2024-08-24 03:03:01.693215] ERROR: UserDao: 获取用户: 0项目列表失败, list_project_by_user() missing 1 required positional argument: 'user_id'
+[2024-08-24 03:06:20.416600] ERROR: UserDao: 获取用户: 0项目列表失败, list_project_by_user() missing 1 required positional argument: 'user_id'
+[2024-08-24 03:10:44.165281] ERROR: UserDao: 获取用户: 0项目列表失败, list_project_by_user() missing 1 required positional argument: 'user_id'
+[2024-08-24 03:13:19.714729] ERROR: UserDao: 获取用户: 0项目列表失败, list_project_by_user() missing 1 required positional argument: 'user_id'
+[2024-08-24 03:13:20.561534] ERROR: UserDao: 获取用户: 0项目列表失败, list_project_by_user() missing 1 required positional argument: 'user_id'
+[2024-08-24 03:13:21.623940] ERROR: UserDao: 获取用户: 0项目列表失败, list_project_by_user() missing 1 required positional argument: 'user_id'
+[2024-08-24 03:13:22.545014] ERROR: UserDao: 获取用户: 0项目列表失败, list_project_by_user() missing 1 required positional argument: 'user_id'
+[2024-08-24 03:25:39.254617] ERROR: UserDao: 获取用户: 0项目列表失败, list_project_by_user() missing 1 required positional argument: 'user_id'
+[2024-08-24 03:33:36.898601] ERROR: UserDao: 获取用户: 13项目列表失败, list_project_by_user() missing 1 required positional argument: 'user_id'
+[2024-08-24 03:38:55.452640] ERROR: UserDao: 获取用户: 13项目列表失败, list_project_by_user() missing 1 required positional argument: 'user_id'
+[2024-08-24 03:39:14.646373] ERROR: UserDao: 查询用户：13项目失败，Entity namespace for "project_role" has no property "user_id"
+[2024-08-24 03:39:14.646768] ERROR: UserDao: 获取用户: 13项目列表失败, exceptions must derive from BaseException
+[2024-08-24 03:40:48.386173] ERROR: UserDao: 查询用户：13项目失败，Entity namespace for "project_role" has no property "user_id"
+[2024-08-24 03:41:14.565678] ERROR: UserDao: 获取用户: 13项目列表失败, exceptions must derive from BaseException
+[2024-08-24 03:59:56.544307] ERROR: UserDao: 查询用户：13项目失败，Entity namespace for "project_role" has no property "user_id"
+[2024-08-24 03:59:56.544550] ERROR: UserDao: 获取用户: 13项目列表失败, exceptions must derive from BaseException
+[2024-08-24 03:59:58.369456] ERROR: UserDao: 查询用户：13项目失败，Entity namespace for "project_role" has no property "user_id"
+[2024-08-24 03:59:58.369586] ERROR: UserDao: 获取用户: 13项目列表失败, exceptions must derive from BaseException
+[2024-08-24 03:59:59.606742] ERROR: UserDao: 查询用户：13项目失败，Entity namespace for "project_role" has no property "user_id"
+[2024-08-24 03:59:59.606881] ERROR: UserDao: 获取用户: 13项目列表失败, exceptions must derive from BaseException
+[2024-08-24 04:00:33.374247] ERROR: UserDao: 查询用户：13项目失败，Entity namespace for "project_role" has no property "user_id"
+[2024-08-24 04:00:33.374538] ERROR: UserDao: 获取用户: 13项目列表失败, exceptions must derive from BaseException
+[2024-08-24 04:26:13.096638] ERROR: UserDao: 查询用户：13项目失败，Entity namespace for "project_role" has no property "user_id"
+[2024-08-24 04:26:13.099051] ERROR: UserDao: 获取用户: 13项目列表失败, exceptions must derive from BaseException
+[2024-08-24 05:24:06.035199] ERROR: UserDao: 查询用户：13项目失败，Entity namespace for "project_role" has no property "user_id"
+[2024-08-24 05:24:06.036610] ERROR: UserDao: 获取用户: 13项目列表失败, exceptions must derive from BaseException
+[2024-08-24 05:38:41.345398] ERROR: UserDao: 查询用户：13项目失败，Entity namespace for "project_role" has no property "user_id"
+[2024-08-24 05:39:34.441903] ERROR: UserDao: 获取用户: 13项目列表失败, exceptions must derive from BaseException
+[2024-08-24 06:12:28.020212] ERROR: UserDao: 查询用户：13项目失败，Entity namespace for "project_role" has no property "user_id"
+[2024-08-24 06:15:57.116711] ERROR: UserDao: 查询用户：13项目失败，(mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'project_role.user_id' in 'field list'
+[SQL: SELECT project_role.id AS project_role_id, project_role.user_id AS project_role_user_id, project_role.project_id AS project_role_project_id, project_role.project_role AS project_role_project_role, project_role.created_at AS project_role_created_at, project_role.updated_at AS project_role_updated_at, project_role.deleted_at AS project_role_deleted_at, project_role.create_user AS project_role_create_user, project_role.update_user AS project_role_update_user 
+FROM project_role 
+WHERE project_role.user_id = %(user_id_1)s AND project_role.deleted_at IS NULL]
+[parameters: {'user_id_1': 13}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2024-08-24 06:15:57.117012] ERROR: UserDao: 获取用户: 13项目列表失败, exceptions must derive from BaseException
+[2024-08-24 06:15:59.420049] ERROR: UserDao: 查询用户：13项目失败，(mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'project_role.user_id' in 'field list'
+[SQL: SELECT project_role.id AS project_role_id, project_role.user_id AS project_role_user_id, project_role.project_id AS project_role_project_id, project_role.project_role AS project_role_project_role, project_role.created_at AS project_role_created_at, project_role.updated_at AS project_role_updated_at, project_role.deleted_at AS project_role_deleted_at, project_role.create_user AS project_role_create_user, project_role.update_user AS project_role_update_user 
+FROM project_role 
+WHERE project_role.user_id = %(user_id_1)s AND project_role.deleted_at IS NULL]
+[parameters: {'user_id_1': 13}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2024-08-24 06:15:59.420203] ERROR: UserDao: 获取用户: 13项目列表失败, exceptions must derive from BaseException
+[2024-08-24 06:17:50.787209] ERROR: UserDao: 查询用户：13项目失败，(mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'project_role.user_id' in 'field list'
+[SQL: SELECT project_role.id AS project_role_id, project_role.user_id AS project_role_user_id, project_role.project_id AS project_role_project_id, project_role.project_role AS project_role_project_role, project_role.created_at AS project_role_created_at, project_role.updated_at AS project_role_updated_at, project_role.deleted_at AS project_role_deleted_at, project_role.create_user AS project_role_create_user, project_role.update_user AS project_role_update_user 
+FROM project_role 
+WHERE project_role.user_id = %(user_id_1)s AND project_role.deleted_at IS NULL]
+[parameters: {'user_id_1': 13}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2024-08-24 06:17:50.788256] ERROR: UserDao: 获取用户: 13项目列表失败, exceptions must derive from BaseException
+[2024-08-24 06:17:51.192463] ERROR: UserDao: 查询用户：13项目失败，(mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'project_role.user_id' in 'field list'
+[SQL: SELECT project_role.id AS project_role_id, project_role.user_id AS project_role_user_id, project_role.project_id AS project_role_project_id, project_role.project_role AS project_role_project_role, project_role.created_at AS project_role_created_at, project_role.updated_at AS project_role_updated_at, project_role.deleted_at AS project_role_deleted_at, project_role.create_user AS project_role_create_user, project_role.update_user AS project_role_update_user 
+FROM project_role 
+WHERE project_role.user_id = %(user_id_1)s AND project_role.deleted_at IS NULL]
+[parameters: {'user_id_1': 13}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2024-08-24 06:17:51.192703] ERROR: UserDao: 获取用户: 13项目列表失败, exceptions must derive from BaseException
+[2024-08-24 06:17:51.922722] ERROR: UserDao: 查询用户：13项目失败，(mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'project_role.user_id' in 'field list'
+[SQL: SELECT project_role.id AS project_role_id, project_role.user_id AS project_role_user_id, project_role.project_id AS project_role_project_id, project_role.project_role AS project_role_project_role, project_role.created_at AS project_role_created_at, project_role.updated_at AS project_role_updated_at, project_role.deleted_at AS project_role_deleted_at, project_role.create_user AS project_role_create_user, project_role.update_user AS project_role_update_user 
+FROM project_role 
+WHERE project_role.user_id = %(user_id_1)s AND project_role.deleted_at IS NULL]
+[parameters: {'user_id_1': 13}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2024-08-24 06:17:51.922890] ERROR: UserDao: 获取用户: 13项目列表失败, exceptions must derive from BaseException
+[2024-08-24 06:18:09.978918] ERROR: UserDao: 查询用户：13项目失败，(mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'project_role.user_id' in 'field list'
+[SQL: SELECT project_role.id AS project_role_id, project_role.user_id AS project_role_user_id, project_role.project_id AS project_role_project_id, project_role.project_role AS project_role_project_role, project_role.created_at AS project_role_created_at, project_role.updated_at AS project_role_updated_at, project_role.deleted_at AS project_role_deleted_at, project_role.create_user AS project_role_create_user, project_role.update_user AS project_role_update_user 
+FROM project_role 
+WHERE project_role.user_id = %(user_id_1)s AND project_role.deleted_at IS NULL]
+[parameters: {'user_id_1': 13}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2024-08-24 06:18:09.979809] ERROR: UserDao: 获取用户: 13项目列表失败, exceptions must derive from BaseException
+[2024-08-24 06:18:11.172910] ERROR: UserDao: 查询用户：13项目失败，(mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'project_role.user_id' in 'field list'
+[SQL: SELECT project_role.id AS project_role_id, project_role.user_id AS project_role_user_id, project_role.project_id AS project_role_project_id, project_role.project_role AS project_role_project_role, project_role.created_at AS project_role_created_at, project_role.updated_at AS project_role_updated_at, project_role.deleted_at AS project_role_deleted_at, project_role.create_user AS project_role_create_user, project_role.update_user AS project_role_update_user 
+FROM project_role 
+WHERE project_role.user_id = %(user_id_1)s AND project_role.deleted_at IS NULL]
+[parameters: {'user_id_1': 13}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2024-08-24 06:18:11.173289] ERROR: UserDao: 获取用户: 13项目列表失败, exceptions must derive from BaseException
+[2024-08-24 06:40:26.812500] ERROR: UserDao: 获取用户: 13项目列表失败, type object 'Project' has no attribute 'create_at'
+[2024-08-24 06:40:33.142224] ERROR: UserDao: 获取用户: 13项目列表失败, type object 'Project' has no attribute 'create_at'
+[2024-08-24 06:40:34.224195] ERROR: UserDao: 获取用户: 13项目列表失败, type object 'Project' has no attribute 'create_at'
+[2024-08-24 06:40:35.075718] ERROR: UserDao: 获取用户: 13项目列表失败, type object 'Project' has no attribute 'create_at'
+[2024-08-24 06:40:35.737598] ERROR: UserDao: 获取用户: 13项目列表失败, type object 'Project' has no attribute 'create_at'
+[2024-08-24 06:42:07.645059] ERROR: UserDao: 获取用户: 13项目列表失败, type object 'Project' has no attribute 'create_at'
+[2024-08-24 06:42:59.479747] ERROR: UserDao: 获取用户: 13项目列表失败, type object 'Project' has no attribute 'create_at'
+[2024-08-24 06:43:00.488885] ERROR: UserDao: 获取用户: 13项目列表失败, type object 'Project' has no attribute 'create_at'
+[2024-08-24 06:43:02.157125] ERROR: UserDao: 获取用户: 13项目列表失败, type object 'Project' has no attribute 'create_at'
+[2024-08-24 06:47:13.092244] ERROR: UserDao: 获取用户: 13项目列表失败, type object 'Project' has no attribute 'create_at'
+[2024-08-24 06:47:13.945840] ERROR: UserDao: 获取用户: 13项目列表失败, type object 'Project' has no attribute 'create_at'
+[2024-08-24 06:55:04.690923] ERROR: UserDao: 获取用户: 13项目列表失败, type object 'Project' has no attribute 'create_at'
+[2024-08-24 07:01:31.081982] ERROR: UserDao: 获取用户: 13项目列表失败, paginate() takes 1 positional argument but 2 positional arguments (and 1 keyword-only argument) were given
+[2024-08-24 18:34:08.927302] ERROR: UserDao: 查询用户：13项目失败，'NoneType' object is not iterable
+[2024-08-24 18:34:08.931822] ERROR: UserDao: 获取用户: 13项目列表失败, exceptions must derive from BaseException

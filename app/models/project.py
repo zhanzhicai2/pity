@@ -3,6 +3,7 @@ from datetime import datetime
 
 
 class Project(db.Model):
+    __tablename__ = 'project'
     id = db.Column(db.INT, primary_key=True)
     name = db.Column(db.String(16), unique=True, index=True)
     owner = db.Column(db.INT)

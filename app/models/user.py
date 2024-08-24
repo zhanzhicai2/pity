@@ -4,6 +4,9 @@ from datetime import datetime
 
 
 class User(db.Model):
+
+    __tablename__ = 'user'
+
     id = db.Column(db.INT, primary_key=True)
     username = db.Column(db.String(16), unique=True, index=True)
     name = db.Column(db.String(16), index=True)
