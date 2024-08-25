@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify
 
 from app import pity
 from app.handler.page import PageHandler
-from app.dao.project.ProjectRole import ProjectDao
+from app.dao.project.ProjectDao import ProjectDao
 from app.utils.decorator import permission
 from app.handler.fatcory import ResponseFactory
 
@@ -47,7 +47,8 @@ def insert_project(user_info):
         if not data.get("name") or not data.get("owner"):
             return jsonify(dict(code=101, msg="项目名称/项目负责人不能为空"))
         private = data.get("private", False)
-        err = ProjectDao.add_project(data.get("name"), data.get("owner"), user_id, private, data.get("description", ""))
+        description=data.get("description", "")
+        err = ProjectDao.add_project(data.get("name"), data.get("owner"), user_id, description, private,)
         if err is not None:
             return jsonify(dict(code=110, msg=err))
         return jsonify(dict(code=0, msg="操作成功"))
