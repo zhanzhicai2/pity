@@ -13,7 +13,7 @@ class ProjectRole(db.Model):
     create_user = db.Column(db.INT, nullable=True)
     update_user = db.Column(db.INT, nullable=True)
 
-    def __init__(self, project_id, user_id, project_role, create_user):
+    def __init__(self, user_id, project_id,  project_role, create_user):
         self.project_id = project_id
         self.user_id = user_id
         self.project_role = project_role

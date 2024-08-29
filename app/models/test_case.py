@@ -21,8 +21,8 @@ class TestCase(db.Model):
     create_user = db.Column(db.INT, nullable=False)
     update_user = db.Column(db.INT, nullable=False)
 
-    def __init__(self, name, request_type, url, project_id, tag, status, expected, create_user, params,body,request_header=None,
-                 request_method=None):
+    def __init__(self, name, request_type, url, project_id, tag, status, expected, create_user,
+                 request_header=None, request_method=None):
         self.name = name
         self.request_type = request_type
         self.url = url
@@ -33,8 +33,6 @@ class TestCase(db.Model):
         self.create_user = create_user
         self.update_user = create_user
         self.request_header = request_header
-        self.params = params
-        self.body = body
         self.request_method = request_method
         self.created_at = datetime.now()
         self.updated_at = datetime.now()

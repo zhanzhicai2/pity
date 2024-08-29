@@ -189,3 +189,24 @@ WHERE project_role.user_id = %(user_id_1)s AND project_role.deleted_at IS NULL]
 [2024-08-25 23:16:55.867373] ERROR: UserDao: 新增项目: 悟空失败, (builtins.TypeError) Not a boolean value: '悟空'
 [SQL: INSERT INTO project (name, owner, created_at, updated_at, deleted_at, create_user, update_user, private, description) VALUES (%(name)s, %(owner)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(create_user)s, %(update_user)s, %(private)s, %(description)s)]
 [parameters: [{'owner': '14', 'update_user': 14, 'private': '悟空', 'create_user': 14, 'created_at': datetime.datetime(2024, 8, 25, 23, 16, 52, 520983), 'description': True, 'name': '悟空', 'updated_at': datetime.datetime(2024, 8, 25, 23, 16, 52, 702166), 'deleted_at': None}]]
+[2024-08-26 20:42:01.358225] ERROR: UserDao: 查询项目：4角色列表失败,Entity '<class 'app.models.project_role.ProjectRole'>' has no property 'deleted'
+[2024-08-26 20:42:21.228287] ERROR: UserDao: 查询项目：2角色列表失败,Entity '<class 'app.models.project_role.ProjectRole'>' has no property 'deleted'
+[2024-08-26 20:55:37.862592] ERROR: UserDao: 查询项目: 2失败, Entity '<class 'app.models.project.Project'>' has no property 'delete_at'
+[2024-08-26 20:58:10.341416] ERROR: UserDao: 查询项目：2角色列表失败,Entity '<class 'app.models.project_role.ProjectRole'>' has no property 'deleted'
+[2024-08-26 20:58:41.092725] ERROR: UserDao: 查询项目：2角色列表失败,Entity '<class 'app.models.project_role.ProjectRole'>' has no property 'deleted'
+[2024-08-27 06:39:07.487463] ERROR: UserDao: 添加项目用户失败, name 'user_role' is not defined
+[2024-08-27 06:39:11.460749] ERROR: UserDao: 添加项目用户失败, name 'user_role' is not defined
+[2024-08-27 06:39:15.165577] ERROR: UserDao: 添加项目用户失败, name 'user_role' is not defined
+[2024-08-27 06:39:15.570983] ERROR: UserDao: 添加项目用户失败, name 'user_role' is not defined
+[2024-08-29 07:51:15.751509] ERROR: UserDao: 新增项目: 帝国神话2失败, (builtins.TypeError) Not a boolean value: '4'
+[SQL: INSERT INTO project (name, owner, created_at, updated_at, deleted_at, create_user, update_user, private, description) VALUES (%(name)s, %(owner)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(create_user)s, %(update_user)s, %(private)s, %(description)s)]
+[parameters: [{'description': False, 'updated_at': datetime.datetime(2024, 8, 29, 7, 51, 15, 748778), 'owner': '21', 'name': '帝国神话2', 'created_at': datetime.datetime(2024, 8, 29, 7, 51, 15, 748768), 'update_user': 21, 'private': '4', 'create_user': 21, 'deleted_at': None}]]
+[2024-08-29 07:51:21.526987] ERROR: UserDao: 新增项目: 帝国神话2失败, (builtins.TypeError) Not a boolean value: '4'
+[SQL: INSERT INTO project (name, owner, created_at, updated_at, deleted_at, create_user, update_user, private, description) VALUES (%(name)s, %(owner)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(create_user)s, %(update_user)s, %(private)s, %(description)s)]
+[parameters: [{'description': True, 'updated_at': datetime.datetime(2024, 8, 29, 7, 51, 21, 526295), 'owner': '21', 'name': '帝国神话2', 'created_at': datetime.datetime(2024, 8, 29, 7, 51, 21, 526288), 'update_user': 21, 'private': '4', 'create_user': 21, 'deleted_at': None}]]
+[2024-08-29 07:52:04.937387] ERROR: UserDao: 新增项目: 帝国神话2失败, (builtins.TypeError) Not a boolean value: '4'
+[SQL: INSERT INTO project (name, owner, created_at, updated_at, deleted_at, create_user, update_user, private, description) VALUES (%(name)s, %(owner)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(create_user)s, %(update_user)s, %(private)s, %(description)s)]
+[parameters: [{'description': True, 'updated_at': datetime.datetime(2024, 8, 29, 7, 52, 4, 936635), 'owner': '21', 'name': '帝国神话2', 'created_at': datetime.datetime(2024, 8, 29, 7, 52, 4, 936629), 'update_user': 21, 'private': '4', 'create_user': 21, 'deleted_at': None}]]
+[2024-08-29 07:52:36.421085] ERROR: UserDao: 新增项目: 帝国失败, (builtins.TypeError) Not a boolean value: '4'
+[SQL: INSERT INTO project (name, owner, created_at, updated_at, deleted_at, create_user, update_user, private, description) VALUES (%(name)s, %(owner)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(create_user)s, %(update_user)s, %(private)s, %(description)s)]
+[parameters: [{'description': True, 'updated_at': datetime.datetime(2024, 8, 29, 7, 52, 36, 420412), 'owner': '21', 'name': '帝国', 'created_at': datetime.datetime(2024, 8, 29, 7, 52, 36, 420406), 'update_user': 21, 'private': '4', 'create_user': 21, 'deleted_at': None}]]
