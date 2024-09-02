@@ -22,5 +22,5 @@ def hello_world():  # put application's code here
     return 'Hello World!3344'
 
 
-if __name__ == '__main__':
-    pity.run("0.0.0.0", threaded=True, port="7777")
+# if __name__ == '__main__':
+#     pity.run("0.0.0.0", threaded=True, port="7777")

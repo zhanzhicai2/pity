@@ -67,10 +67,16 @@ def query_project(user_info):
     if project_id is None or not project_id.isdigit():
         return jsonify(dict(code=101, msg="请传入正确的project_id"))
     result = dict()
-    data, roles, err = ProjectDao.query_project(project_id)
+    # data, roles, err = ProjectDao.query_project(project_id)
+    data, roles, tree, err = ProjectDao.query_project(project_id)
     if err is not None:
         return jsonify(dict(code=110, data=result, msg=err))
-    result.update({"project": ResponseFactory.model_to_dict(data), "roles": ResponseFactory.model_to_list(roles)})
+    result.update({"project": ResponseFactory.model_to_dict(data), "roles": ResponseFactory.model_to_list(roles),
+                   "test_case": tree})
+
+    # result.update({"project": ResponseFactory.model_to_dict(data), "roles": ResponseFactory.model_to_list(roles),
+    #                })
+
     return jsonify(dict(code=0, data=result, msg="操作成功"))
 
 

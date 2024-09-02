@@ -210,3 +210,39 @@ WHERE project_role.user_id = %(user_id_1)s AND project_role.deleted_at IS NULL]
 [2024-08-29 07:52:36.421085] ERROR: UserDao: 新增项目: 帝国失败, (builtins.TypeError) Not a boolean value: '4'
 [SQL: INSERT INTO project (name, owner, created_at, updated_at, deleted_at, create_user, update_user, private, description) VALUES (%(name)s, %(owner)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(create_user)s, %(update_user)s, %(private)s, %(description)s)]
 [parameters: [{'description': True, 'updated_at': datetime.datetime(2024, 8, 29, 7, 52, 36, 420412), 'owner': '21', 'name': '帝国', 'created_at': datetime.datetime(2024, 8, 29, 7, 52, 36, 420406), 'update_user': 21, 'private': '4', 'create_user': 21, 'deleted_at': None}]]
+[2024-09-02 19:30:00.565608] ERROR: UserDao: 获取测试用例失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'test_case.params' in 'field list'
+[SQL: SELECT test_case.id AS test_case_id, test_case.name AS test_case_name, test_case.request_type AS test_case_request_type, test_case.url AS test_case_url, test_case.request_method AS test_case_request_method, test_case.request_header AS test_case_request_header, test_case.params AS test_case_params, test_case.body AS test_case_body, test_case.project_id AS test_case_project_id, test_case.tag AS test_case_tag, test_case.status AS test_case_status, test_case.priority AS test_case_priority, test_case.catalogue AS test_case_catalogue, test_case.expected AS test_case_expected, test_case.created_at AS test_case_created_at, test_case.updated_at AS test_case_updated_at, test_case.deleted_at AS test_case_deleted_at, test_case.create_user AS test_case_create_user, test_case.update_user AS test_case_update_user 
+FROM test_case 
+WHERE test_case.project_id = %(project_id_1)s AND test_case.deleted_at IS NULL ORDER BY test_case.name ASC]
+[parameters: {'project_id_1': '25'}]
+(Background on this error at: http://sqlalche.me/e/f405)
+[2024-09-02 19:32:09.875207] ERROR: UserDao: 获取测试用例失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'test_case.params' in 'field list'
+[SQL: SELECT test_case.id AS test_case_id, test_case.name AS test_case_name, test_case.request_type AS test_case_request_type, test_case.url AS test_case_url, test_case.request_method AS test_case_request_method, test_case.request_header AS test_case_request_header, test_case.params AS test_case_params, test_case.body AS test_case_body, test_case.project_id AS test_case_project_id, test_case.tag AS test_case_tag, test_case.status AS test_case_status, test_case.priority AS test_case_priority, test_case.catalogue AS test_case_catalogue, test_case.expected AS test_case_expected, test_case.created_at AS test_case_created_at, test_case.updated_at AS test_case_updated_at, test_case.deleted_at AS test_case_deleted_at, test_case.create_user AS test_case_create_user, test_case.update_user AS test_case_update_user 
+FROM test_case 
+WHERE test_case.project_id = %(project_id_1)s AND test_case.deleted_at IS NULL ORDER BY test_case.name ASC]
+[parameters: {'project_id_1': '25'}]
+(Background on this error at: http://sqlalche.me/e/f405)
+[2024-09-02 19:33:43.532568] ERROR: UserDao: 获取测试用例失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'test_case.params' in 'field list'
+[SQL: SELECT test_case.id AS test_case_id, test_case.name AS test_case_name, test_case.request_type AS test_case_request_type, test_case.url AS test_case_url, test_case.request_method AS test_case_request_method, test_case.request_header AS test_case_request_header, test_case.params AS test_case_params, test_case.body AS test_case_body, test_case.project_id AS test_case_project_id, test_case.tag AS test_case_tag, test_case.status AS test_case_status, test_case.priority AS test_case_priority, test_case.catalogue AS test_case_catalogue, test_case.expected AS test_case_expected, test_case.created_at AS test_case_created_at, test_case.updated_at AS test_case_updated_at, test_case.deleted_at AS test_case_deleted_at, test_case.create_user AS test_case_create_user, test_case.update_user AS test_case_update_user 
+FROM test_case 
+WHERE test_case.project_id = %(project_id_1)s AND test_case.deleted_at IS NULL ORDER BY test_case.name ASC]
+[parameters: {'project_id_1': '25'}]
+(Background on this error at: http://sqlalche.me/e/f405)
+[2024-09-02 19:33:53.872844] ERROR: UserDao: 获取测试用例失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'test_case.params' in 'field list'
+[SQL: SELECT test_case.id AS test_case_id, test_case.name AS test_case_name, test_case.request_type AS test_case_request_type, test_case.url AS test_case_url, test_case.request_method AS test_case_request_method, test_case.request_header AS test_case_request_header, test_case.params AS test_case_params, test_case.body AS test_case_body, test_case.project_id AS test_case_project_id, test_case.tag AS test_case_tag, test_case.status AS test_case_status, test_case.priority AS test_case_priority, test_case.catalogue AS test_case_catalogue, test_case.expected AS test_case_expected, test_case.created_at AS test_case_created_at, test_case.updated_at AS test_case_updated_at, test_case.deleted_at AS test_case_deleted_at, test_case.create_user AS test_case_create_user, test_case.update_user AS test_case_update_user 
+FROM test_case 
+WHERE test_case.project_id = %(project_id_1)s AND test_case.deleted_at IS NULL ORDER BY test_case.name ASC]
+[parameters: {'project_id_1': '23'}]
+(Background on this error at: http://sqlalche.me/e/f405)
+[2024-09-02 19:34:09.397944] ERROR: UserDao: 获取测试用例失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'test_case.params' in 'field list'
+[SQL: SELECT test_case.id AS test_case_id, test_case.name AS test_case_name, test_case.request_type AS test_case_request_type, test_case.url AS test_case_url, test_case.request_method AS test_case_request_method, test_case.request_header AS test_case_request_header, test_case.params AS test_case_params, test_case.body AS test_case_body, test_case.project_id AS test_case_project_id, test_case.tag AS test_case_tag, test_case.status AS test_case_status, test_case.priority AS test_case_priority, test_case.catalogue AS test_case_catalogue, test_case.expected AS test_case_expected, test_case.created_at AS test_case_created_at, test_case.updated_at AS test_case_updated_at, test_case.deleted_at AS test_case_deleted_at, test_case.create_user AS test_case_create_user, test_case.update_user AS test_case_update_user 
+FROM test_case 
+WHERE test_case.project_id = %(project_id_1)s AND test_case.deleted_at IS NULL ORDER BY test_case.name ASC]
+[parameters: {'project_id_1': '23'}]
+(Background on this error at: http://sqlalche.me/e/f405)
+[2024-09-02 19:34:20.336840] ERROR: UserDao: 获取测试用例失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'test_case.params' in 'field list'
+[SQL: SELECT test_case.id AS test_case_id, test_case.name AS test_case_name, test_case.request_type AS test_case_request_type, test_case.url AS test_case_url, test_case.request_method AS test_case_request_method, test_case.request_header AS test_case_request_header, test_case.params AS test_case_params, test_case.body AS test_case_body, test_case.project_id AS test_case_project_id, test_case.tag AS test_case_tag, test_case.status AS test_case_status, test_case.priority AS test_case_priority, test_case.catalogue AS test_case_catalogue, test_case.expected AS test_case_expected, test_case.created_at AS test_case_created_at, test_case.updated_at AS test_case_updated_at, test_case.deleted_at AS test_case_deleted_at, test_case.create_user AS test_case_create_user, test_case.update_user AS test_case_update_user 
+FROM test_case 
+WHERE test_case.project_id = %(project_id_1)s AND test_case.deleted_at IS NULL ORDER BY test_case.name ASC]
+[parameters: {'project_id_1': '23'}]
+(Background on this error at: http://sqlalche.me/e/f405)

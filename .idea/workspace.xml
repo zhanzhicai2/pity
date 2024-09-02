@@ -5,17 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c72a3621-16d1-42fa-bbb5-b40dfa541e7f" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/pity.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pity.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/project/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/project/project.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dao/project/ProjectDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/project/ProjectDao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/project/insertProject.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/project/insertProjectRole.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/project/listProject.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/project/projectRoleDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/project/projectRoleDao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/project.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/project_role.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/project_role.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/middleware/HttpClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/middleware/HttpClient.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/test_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/decorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/decorator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/auth/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/test_case/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/pity.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/pity.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +69,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.stylelint": "",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.breadcrumbs"
+    "settings.editor.selected.configurable": "database.query.execution"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -84,7 +85,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run">
+  <component name="RunManager" selected="Flask 服务器.pity">
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pity" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,6 +143,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.PythonAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </EXTENSION>
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -152,20 +158,32 @@
       <method v="2" />
     </configuration>
     <configuration name="pity" type="Python.FlaskServer">
+      <option name="additionalOptions" value="--port=7777 --host=0.0.0.0" />
       <module name="pity" />
       <option name="target" value="$PROJECT_DIR$/run.py" />
       <option name="targetType" value="PATH" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.PythonAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </EXTENSION>
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Flask 服务器.pity" />
+      <item itemvalue="Python.__init__" />
+      <item itemvalue="Python.config" />
+      <item itemvalue="Python.run" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.run" />
@@ -185,7 +203,7 @@
       <workItem from="1724056392243" duration="54040000" />
       <workItem from="1724387165840" duration="52522000" />
       <workItem from="1724483042225" duration="21795000" />
-      <workItem from="1724564577479" duration="47732000" />
+      <workItem from="1724564577479" duration="68751000" />
     </task>
     <task id="LOCAL-00001" summary="修复git练习">
       <created>1724218314075</created>
@@ -243,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1724604726893</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="测试平台系列(24) 编写成员管理功能">
+      <created>1724889675240</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1724889675240</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +295,8 @@
     <MESSAGE value="测试平台系列(20) 编写项目的增删改查接口和页面(1)" />
     <MESSAGE value="测试平台系列(22) 编写项目的增删改查接口和页面(4)" />
     <MESSAGE value="生成依赖文件pip freeze &gt; requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="生成依赖文件pip freeze &gt; requirements.txt" />
+    <MESSAGE value="测试平台系列(24) 编写成员管理功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试平台系列(24) 编写成员管理功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -542,7 +568,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
-          <line>70</line>
+          <line>71</line>
           <option name="timeStamp" value="111" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -576,43 +602,43 @@
           <option name="timeStamp" value="120" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/dao/project/projectRoleDao.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="121" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/dao/project/projectRoleDao.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="122" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
           <line>65</line>
           <option name="timeStamp" value="123" />
         </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/dao/project/ProjectDao.py</url>
+          <line>82</line>
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/dao/project/ProjectDao.py</url>
+          <line>87</line>
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/dao/project/projectRoleDao.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/dao/project/projectRoleDao.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
           <line>69</line>
-          <option name="timeStamp" value="124" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/dao/project/ProjectDao.py</url>
-          <line>81</line>
-          <option name="timeStamp" value="126" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/dao/project/ProjectDao.py</url>
-          <line>86</line>
-          <option name="timeStamp" value="127" />
+          <option name="timeStamp" value="133" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pity$__init__.coverage" NAME="__init__ 覆盖结果" MODIFIED="1724528526707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/models" />
-    <SUITE FILE_PATH="coverage/pity$pity.coverage" NAME="pity 覆盖结果" MODIFIED="1724056766664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/pity$pity.coverage" NAME="pity 覆盖结果" MODIFIED="1725284722116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pity$app.coverage" NAME="run 覆盖结果" MODIFIED="1724362217649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pity$run.coverage" NAME="run 覆盖结果" MODIFIED="1724889288874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pity$run.coverage" NAME="run 覆盖结果" MODIFIED="1725227949129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pity$config.coverage" NAME="config 覆盖结果" MODIFIED="1724058835991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

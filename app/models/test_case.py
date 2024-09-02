@@ -14,6 +14,8 @@ class TestCase(db.Model):
     project_id = db.Column(db.INT, comment="所属项目")
     tag = db.Column(db.String(64), comment="用例标签")
     status = db.Column(db.INT, comment="用例状态: 1: 待完成 2: 暂时关闭 3: 正常运作")
+    priority = db.Column(db.String(3), comment="用例优先级: p0-p3")
+    catalogue = db.Column(db.String(12), comment="用例目录")
     expected = db.Column(db.TEXT, comment="预期结果, 支持el表达式", nullable=False)
     created_at = db.Column(db.DATETIME, nullable=False)
     updated_at = db.Column(db.DATETIME, nullable=False)
@@ -21,8 +23,8 @@ class TestCase(db.Model):
     create_user = db.Column(db.INT, nullable=False)
     update_user = db.Column(db.INT, nullable=False)
 
-    def __init__(self, name, request_type, url, project_id, tag, status, expected, create_user,
-                 request_header=None, request_method=None):
+    def __init__(self, name, request_type, url, project_id, tag, status, expected, create_user, request_header=None,
+                 request_method=None):
         self.name = name
         self.request_type = request_type
         self.url = url

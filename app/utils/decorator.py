@@ -76,7 +76,7 @@ class SingletonDecorator:
 
 
 def permission(role=pity.config.get("GUEST")):
-    role = pity.config.get("GUEST")
+    # role = pity.config.get("GUEST")
     def login_required(func):
         @wraps(func)
         def wrapper(*args, **kwargs):

@@ -2,6 +2,13 @@ import datetime
 import requests
 
 
+def get_response(response):
+    try:
+        return response.json()
+    except:
+        return response.text
+
+
 class Request(object):
     def __init__(self, url, session=False, **kwargs):
         self.url = url
@@ -35,7 +42,7 @@ class Request(object):
             if status_code != 200:
                 return Request.response(False, status_code)
             elapsed = Request.get_elapsed(response.elapsed)
-            data = self.get_response(response)
+            data = get_response(response)
             return Request.response(True, 200, data, response.headers, response.request.headers, elapsed=elapsed,
                                     cookies=response.cookies)
         except Exception as e:
@@ -43,12 +50,6 @@ class Request(object):
 
     def post(self):
         return self.request("POST")
-
-    def get_response(self, response):
-        try:
-            return response.json()
-        except:
-            return response.text
 
     @staticmethod
     def response(status, status_code=200, response=None, response_header=None,
