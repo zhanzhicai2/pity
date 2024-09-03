@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from app import pity
+from app.controllers.testcase.testcase import ts
 from app.utils.logger import Log
 from app.controllers.auth.user import auth
 from app.controllers.request.http import req
@@ -11,6 +12,7 @@ from app import dao
 pity.register_blueprint(auth)
 pity.register_blueprint(req)
 pity.register_blueprint(pr)
+pity.register_blueprint(ts)
 
 
 @pity.route('/')

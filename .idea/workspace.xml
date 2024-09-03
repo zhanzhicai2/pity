@@ -5,17 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c72a3621-16d1-42fa-bbb5-b40dfa541e7f" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/pity.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pity.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/testcase/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/testcase/testcase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/executor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/project/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/project/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/request/http.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/request/http.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dao/project/ProjectDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/project/ProjectDao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/middleware/HttpClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/middleware/HttpClient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/project.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/test_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/utils/decorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/decorator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/auth/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/test_case/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/pity.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/pity.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +70,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.stylelint": "",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "database.query.execution"
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -203,7 +204,7 @@
       <workItem from="1724056392243" duration="54040000" />
       <workItem from="1724387165840" duration="52522000" />
       <workItem from="1724483042225" duration="21795000" />
-      <workItem from="1724564577479" duration="68751000" />
+      <workItem from="1724564577479" duration="87397000" />
     </task>
     <task id="LOCAL-00001" summary="修复git练习">
       <created>1724218314075</created>
@@ -268,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1724889675240</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="测试平台系列(24) 新增用例树">
+      <created>1725284874264</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1725284874264</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,44 +304,45 @@
     <MESSAGE value="测试平台系列(22) 编写项目的增删改查接口和页面(4)" />
     <MESSAGE value="生成依赖文件pip freeze &gt; requirements.txt" />
     <MESSAGE value="测试平台系列(24) 编写成员管理功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试平台系列(24) 编写成员管理功能" />
+    <MESSAGE value="测试平台系列(24) 新增用例树" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试平台系列(24) 新增用例树" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/controllers/request/http.py</url>
-          <line>30</line>
+          <line>31</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/controllers/request/http.py</url>
-          <line>29</line>
+          <line>30</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/controllers/request/http.py</url>
-          <line>28</line>
+          <line>29</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/controllers/request/http.py</url>
-          <line>14</line>
+          <line>15</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/controllers/request/http.py</url>
-          <line>18</line>
+          <line>19</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/controllers/request/http.py</url>
-          <line>13</line>
+          <line>14</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/controllers/request/http.py</url>
-          <line>12</line>
+          <line>13</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -393,22 +402,22 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/utils/decorator.py</url>
-          <line>83</line>
+          <line>84</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/utils/decorator.py</url>
-          <line>84</line>
+          <line>85</line>
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/utils/decorator.py</url>
-          <line>85</line>
+          <line>86</line>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/utils/decorator.py</url>
-          <line>87</line>
+          <line>88</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -473,12 +482,12 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/utils/decorator.py</url>
-          <line>93</line>
+          <line>94</line>
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/utils/decorator.py</url>
-          <line>94</line>
+          <line>95</line>
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -493,7 +502,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/utils/decorator.py</url>
-          <line>78</line>
+          <line>79</line>
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -510,31 +519,6 @@
           <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
           <line>32</line>
           <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
-          <line>48</line>
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
-          <line>49</line>
-          <option name="timeStamp" value="97" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
-          <line>51</line>
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
-          <line>50</line>
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
-          <line>52</line>
-          <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/dao/project/ProjectDao.py</url>
@@ -567,11 +551,6 @@
           <option name="timeStamp" value="108" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
-          <line>71</line>
-          <option name="timeStamp" value="111" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/dao/project/projectRoleDao.py</url>
           <line>52</line>
           <option name="timeStamp" value="115" />
@@ -602,41 +581,131 @@
           <option name="timeStamp" value="120" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
-          <line>65</line>
-          <option name="timeStamp" value="123" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/dao/project/ProjectDao.py</url>
-          <line>82</line>
+          <line>83</line>
           <option name="timeStamp" value="126" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/dao/project/ProjectDao.py</url>
-          <line>87</line>
+          <line>88</line>
           <option name="timeStamp" value="127" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/dao/project/projectRoleDao.py</url>
           <line>30</line>
           <option name="timeStamp" value="131" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/dao/project/projectRoleDao.py</url>
           <line>31</line>
           <option name="timeStamp" value="132" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/testcase/testcase.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/testcase/testcase.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/testcase/testcase.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/testcase/testcase.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="139" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
+          <line>73</line>
+          <option name="timeStamp" value="140" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
+          <line>74</line>
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
+          <line>76</line>
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
+          <line>82</line>
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
+          <line>50</line>
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/testcase/testcase.py</url>
           <line>69</line>
-          <option name="timeStamp" value="133" />
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/testcase/testcase.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/testcase/testcase.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="153" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/testcase/testcase.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="154" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/controllers/testcase/testcase.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="155" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="156" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="157" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pity$__init__.coverage" NAME="__init__ 覆盖结果" MODIFIED="1724528526707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/models" />
-    <SUITE FILE_PATH="coverage/pity$pity.coverage" NAME="pity 覆盖结果" MODIFIED="1725284722116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pity$pity.coverage" NAME="pity 覆盖结果" MODIFIED="1725383962313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pity$app.coverage" NAME="run 覆盖结果" MODIFIED="1724362217649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pity$run.coverage" NAME="run 覆盖结果" MODIFIED="1725227949129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pity$config.coverage" NAME="config 覆盖结果" MODIFIED="1724058835991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
