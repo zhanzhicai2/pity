@@ -35,6 +35,7 @@ class TestCase(db.Model):
         self.priority = priority
         self.status = status
         # self.expected = expected
+        # self.expected = expected
         self.body = body
         self.create_user = create_user
         self.update_user = create_user

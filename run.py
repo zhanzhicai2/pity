@@ -8,6 +8,7 @@ from app.controllers.request.http import req
 from app.controllers.project.project import pr
 from app import dao
 
+
 # 注册蓝图
 pity.register_blueprint(auth)
 pity.register_blueprint(req)
