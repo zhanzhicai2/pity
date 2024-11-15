@@ -1,6 +1,9 @@
 import logbook
 
+
+import logbook
 from app import pity
+from config import Config
 from .decorator import SingletonDecorator
 
 
@@ -8,7 +11,7 @@ from .decorator import SingletonDecorator
 class Log(object):
     handler = None
 
-    def __init__(self, name='pity', filename=pity.config['LOG_NAME']):
+    def __init__(self, name='pity', filename=Config.LOG_NAME):  # Logger标识默认为app
         """
         :param name: 业务名称
         :param filename: 文件名称

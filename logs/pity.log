@@ -276,3 +276,61 @@ WHERE test_case.project_id = %(project_id_1)s AND test_case.deleted_at IS NULL O
 [SQL: INSERT INTO test_case (name, request_type, url, request_method, request_header, body, project_id, tag, status, priority, catalogue, created_at, updated_at, deleted_at, create_user, update_user) VALUES (%(name)s, %(request_type)s, %(url)s, %(request_method)s, %(request_header)s, %(body)s, %(project_id)s, %(tag)s, %(status)s, %(priority)s, %(catalogue)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(create_user)s, %(update_user)s)]
 [parameters: {'name': '登陆auth/login', 'request_type': 1, 'url': 'http://127.0.0.1:7777/auth/login', 'request_method': 'POST', 'request_header': '{\n  "Content-Type": "application/json"\n}', 'body': '"username":"313",\n"password":"223"', 'project_id': 23, 'tag': '登陆', 'status': 3, 'priority': 'P0', 'catalogue': 'pity', 'created_at': datetime.datetime(2024, 11, 12, 13, 50, 0, 326518), 'updated_at': datetime.datetime(2024, 11, 12, 13, 50, 0, 326524), 'deleted_at': None, 'create_user': 20, 'update_user': 20}]
 (Background on this error at: http://sqlalche.me/e/gkpj)
+[2024-11-14 16:38:54.015292] ERROR: UserDao: 用户3登录失败: Entity namespace for "pity_user" has no property "delattr_at"
+[2024-11-14 16:39:21.134609] ERROR: UserDao: 用户1登录失败: Entity namespace for "pity_user" has no property "delattr_at"
+[2024-11-14 16:41:48.865328] ERROR: UserDao: 用户1登录失败: Entity namespace for "pity_user" has no property "delattr_at"
+[2024-11-14 17:44:44.268400] ERROR: UserDao: 用户1登录失败: Entity namespace for "pity_user" has no property "delattr_at"
+[2024-11-14 21:32:22.804497] ERROR: UserDao: 用户1登录失败: Entity namespace for "pity_user" has no property "delattr_at"
+[2024-11-14 21:32:22.879922] ERROR: UserDao: 用户1登录失败: Entity namespace for "pity_user" has no property "delattr_at"
+[2024-11-14 21:37:40.220413] ERROR: UserDao: 用户1登录失败: Entity namespace for "pity_user" has no property "delattr_at"
+[2024-11-14 21:44:59.449147] ERROR: UserDao: 用户1登录失败: Entity namespace for "pity_user" has no property "delattr_at"
+[2024-11-14 21:45:12.937104] ERROR: UserDao: 用户1登录失败: Entity namespace for "pity_user" has no property "delattr_at"
+[2024-11-14 21:45:23.453260] ERROR: UserDao: 用户1登录失败: Entity namespace for "pity_user" has no property "delattr_at"
+[2024-11-14 21:45:23.712475] ERROR: UserDao: 用户1登录失败: Entity namespace for "pity_user" has no property "delattr_at"
+[2024-11-14 21:45:40.884756] ERROR: UserDao: 用户1登录失败: Entity namespace for "pity_user" has no property "delattr_at"
+[2024-11-14 21:46:17.199275] ERROR: UserDao: 用户1登录失败: Entity namespace for "pity_user" has no property "delattr_at"
+[2024-11-14 21:52:27.737201] ERROR: UserDao: 用户1登录失败: Entity namespace for "pity_user" has no property "delattr_at"
+[2024-11-14 21:53:37.505414] ERROR: UserDao: 用户1登录失败: Entity namespace for "pity_user" has no property "delattr_at"
+[2024-11-16 04:10:33.931766] ERROR: UserDao: 获取用例断言失败: (mysql.connector.errors.ProgrammingError) 1146 (42S02): Table 'pity.pity_testcase_asserts' doesn't exist
+[SQL: SELECT pity_testcase_asserts.id AS pity_testcase_asserts_id, pity_testcase_asserts.name AS pity_testcase_asserts_name, pity_testcase_asserts.case_id AS pity_testcase_asserts_case_id, pity_testcase_asserts.assert_type AS pity_testcase_asserts_assert_type, pity_testcase_asserts.expected AS pity_testcase_asserts_expected, pity_testcase_asserts.actually AS pity_testcase_asserts_actually, pity_testcase_asserts.created_at AS pity_testcase_asserts_created_at, pity_testcase_asserts.updated_at AS pity_testcase_asserts_updated_at, pity_testcase_asserts.deleted_at AS pity_testcase_asserts_deleted_at, pity_testcase_asserts.create_user AS pity_testcase_asserts_create_user, pity_testcase_asserts.update_user AS pity_testcase_asserts_update_user 
+FROM pity_testcase_asserts 
+WHERE pity_testcase_asserts.case_id = %(case_id_1)s AND pity_testcase_asserts.deleted_at IS NULL ORDER BY pity_testcase_asserts.name ASC]
+[parameters: {'case_id_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-16 04:10:33.937686] ERROR: UserDao: 获取测试用例失败: exceptions must derive from BaseException
+[2024-11-16 04:10:52.432174] ERROR: UserDao: 获取用例断言失败: (mysql.connector.errors.ProgrammingError) 1146 (42S02): Table 'pity.pity_testcase_asserts' doesn't exist
+[SQL: SELECT pity_testcase_asserts.id AS pity_testcase_asserts_id, pity_testcase_asserts.name AS pity_testcase_asserts_name, pity_testcase_asserts.case_id AS pity_testcase_asserts_case_id, pity_testcase_asserts.assert_type AS pity_testcase_asserts_assert_type, pity_testcase_asserts.expected AS pity_testcase_asserts_expected, pity_testcase_asserts.actually AS pity_testcase_asserts_actually, pity_testcase_asserts.created_at AS pity_testcase_asserts_created_at, pity_testcase_asserts.updated_at AS pity_testcase_asserts_updated_at, pity_testcase_asserts.deleted_at AS pity_testcase_asserts_deleted_at, pity_testcase_asserts.create_user AS pity_testcase_asserts_create_user, pity_testcase_asserts.update_user AS pity_testcase_asserts_update_user 
+FROM pity_testcase_asserts 
+WHERE pity_testcase_asserts.case_id = %(case_id_1)s AND pity_testcase_asserts.deleted_at IS NULL ORDER BY pity_testcase_asserts.name ASC]
+[parameters: {'case_id_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-16 04:10:52.434070] ERROR: UserDao: 获取测试用例失败: exceptions must derive from BaseException
+[2024-11-16 04:11:04.340385] ERROR: UserDao: 获取用例断言失败: (mysql.connector.errors.ProgrammingError) 1146 (42S02): Table 'pity.pity_testcase_asserts' doesn't exist
+[SQL: SELECT pity_testcase_asserts.id AS pity_testcase_asserts_id, pity_testcase_asserts.name AS pity_testcase_asserts_name, pity_testcase_asserts.case_id AS pity_testcase_asserts_case_id, pity_testcase_asserts.assert_type AS pity_testcase_asserts_assert_type, pity_testcase_asserts.expected AS pity_testcase_asserts_expected, pity_testcase_asserts.actually AS pity_testcase_asserts_actually, pity_testcase_asserts.created_at AS pity_testcase_asserts_created_at, pity_testcase_asserts.updated_at AS pity_testcase_asserts_updated_at, pity_testcase_asserts.deleted_at AS pity_testcase_asserts_deleted_at, pity_testcase_asserts.create_user AS pity_testcase_asserts_create_user, pity_testcase_asserts.update_user AS pity_testcase_asserts_update_user 
+FROM pity_testcase_asserts 
+WHERE pity_testcase_asserts.case_id = %(case_id_1)s AND pity_testcase_asserts.deleted_at IS NULL ORDER BY pity_testcase_asserts.name ASC]
+[parameters: {'case_id_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-16 04:11:04.340850] ERROR: UserDao: 获取测试用例失败: exceptions must derive from BaseException
+[2024-11-16 04:11:32.632854] ERROR: UserDao: 获取用例断言失败: (mysql.connector.errors.ProgrammingError) 1146 (42S02): Table 'pity.pity_testcase_asserts' doesn't exist
+[SQL: SELECT pity_testcase_asserts.id AS pity_testcase_asserts_id, pity_testcase_asserts.name AS pity_testcase_asserts_name, pity_testcase_asserts.case_id AS pity_testcase_asserts_case_id, pity_testcase_asserts.assert_type AS pity_testcase_asserts_assert_type, pity_testcase_asserts.expected AS pity_testcase_asserts_expected, pity_testcase_asserts.actually AS pity_testcase_asserts_actually, pity_testcase_asserts.created_at AS pity_testcase_asserts_created_at, pity_testcase_asserts.updated_at AS pity_testcase_asserts_updated_at, pity_testcase_asserts.deleted_at AS pity_testcase_asserts_deleted_at, pity_testcase_asserts.create_user AS pity_testcase_asserts_create_user, pity_testcase_asserts.update_user AS pity_testcase_asserts_update_user 
+FROM pity_testcase_asserts 
+WHERE pity_testcase_asserts.case_id = %(case_id_1)s AND pity_testcase_asserts.deleted_at IS NULL ORDER BY pity_testcase_asserts.name ASC]
+[parameters: {'case_id_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-16 04:11:32.633552] ERROR: UserDao: 获取测试用例失败: exceptions must derive from BaseException
+[2024-11-16 04:12:16.169897] ERROR: UserDao: 获取测试用例失败: get_case_children_length() takes 1 positional argument but 2 were given
+[2024-11-16 04:12:33.198227] ERROR: UserDao: 获取用例断言失败: (mysql.connector.errors.ProgrammingError) 1146 (42S02): Table 'pity.pity_testcase_asserts' doesn't exist
+[SQL: SELECT pity_testcase_asserts.id AS pity_testcase_asserts_id, pity_testcase_asserts.name AS pity_testcase_asserts_name, pity_testcase_asserts.case_id AS pity_testcase_asserts_case_id, pity_testcase_asserts.assert_type AS pity_testcase_asserts_assert_type, pity_testcase_asserts.expected AS pity_testcase_asserts_expected, pity_testcase_asserts.actually AS pity_testcase_asserts_actually, pity_testcase_asserts.created_at AS pity_testcase_asserts_created_at, pity_testcase_asserts.updated_at AS pity_testcase_asserts_updated_at, pity_testcase_asserts.deleted_at AS pity_testcase_asserts_deleted_at, pity_testcase_asserts.create_user AS pity_testcase_asserts_create_user, pity_testcase_asserts.update_user AS pity_testcase_asserts_update_user 
+FROM pity_testcase_asserts 
+WHERE pity_testcase_asserts.case_id = %(case_id_1)s AND pity_testcase_asserts.deleted_at IS NULL ORDER BY pity_testcase_asserts.name ASC]
+[parameters: {'case_id_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-16 04:12:33.199217] ERROR: UserDao: 获取测试用例失败: exceptions must derive from BaseException
+[2024-11-16 04:13:31.751006] ERROR: UserDao: 获取用例断言失败: (mysql.connector.errors.ProgrammingError) 1146 (42S02): Table 'pity.pity_testcase_asserts' doesn't exist
+[SQL: SELECT pity_testcase_asserts.id AS pity_testcase_asserts_id, pity_testcase_asserts.name AS pity_testcase_asserts_name, pity_testcase_asserts.case_id AS pity_testcase_asserts_case_id, pity_testcase_asserts.assert_type AS pity_testcase_asserts_assert_type, pity_testcase_asserts.expected AS pity_testcase_asserts_expected, pity_testcase_asserts.actually AS pity_testcase_asserts_actually, pity_testcase_asserts.created_at AS pity_testcase_asserts_created_at, pity_testcase_asserts.updated_at AS pity_testcase_asserts_updated_at, pity_testcase_asserts.deleted_at AS pity_testcase_asserts_deleted_at, pity_testcase_asserts.create_user AS pity_testcase_asserts_create_user, pity_testcase_asserts.update_user AS pity_testcase_asserts_update_user 
+FROM pity_testcase_asserts 
+WHERE pity_testcase_asserts.case_id = %(case_id_1)s AND pity_testcase_asserts.deleted_at IS NULL ORDER BY pity_testcase_asserts.name ASC]
+[parameters: {'case_id_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-16 04:13:31.751992] ERROR: UserDao: 获取测试用例失败: exceptions must derive from BaseException

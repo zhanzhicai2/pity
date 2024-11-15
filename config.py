@@ -13,7 +13,7 @@ class Config(object):
     # print(LOG_NAME)
 
     # Flask jsonify编码问题
-    JSON_AS_ASCII = False
+    # JSON_AS_ASCII = False
 
     # mysql连接信息
     MYSQL_HOST = "127.0.0.1"

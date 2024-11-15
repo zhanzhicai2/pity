@@ -1,21 +1,51 @@
-from flask import Flask
-from flask_cors import CORS
+from fastapi import FastAPI, Request, status
+from fastapi.encoders import jsonable_encoder
+from fastapi.exceptions import RequestValidationError, HTTPException
+from fastapi.responses import JSONResponse
+from app.excpetions.RequestException import PermissionException
+from app.excpetions.RequestException import AuthException
+
+pity = FastAPI()
 
 
-from config import Config
-
-# from flask_restful import Api
-# from flask_sqlalchemy import SQLAlchemy
-# from flask_restful_swagger import swagger
-
-pity = Flask(__name__)
-CORS(pity, supports_credentials=True)
-# api = swagger.docs(Api(pity), apiVersion='0.1')
-# CORS(pity)
-
-pity.config.from_object(Config)
+def error_map(error_type: str, field: str):
+    if "missing" in error_type:
+        return f"缺少参数: {field}"
+    if "params" in error_type:
+        return f"参数: {field} 不规范"
+    if "not_allowed" in error_type:
+        return f"参数: {field} 类型不正确"
 
 
+@pity.exception_handler(RequestValidationError)
+async def validation_exception_handler(request: Request, exc: RequestValidationError):
+    return JSONResponse(
+        status_code=status.HTTP_200_OK,
+        content=jsonable_encoder({
+            "code": 101,
+            "msg": error_map(exc.errors()[0]["type"], exc.errors()[0].get("loc", ['unknown'])[-1]) if len(
+                exc.errors()) > 0 else "参数解析失败",
+        })
+    )
 
 
+@pity.exception_handler(PermissionException)
+async def unexpected_exception_error(request: Request, exc: PermissionException):
+    return JSONResponse(
+        status_code=status.HTTP_200_OK,
+        content=jsonable_encoder({
+            "code": 403,
+            "msg": exc.detail,
+        })
+    )
 
+
+@pity.exception_handler(AuthException)
+async def unexpected_exception_error(request: Request, exc: AuthException):
+    return JSONResponse(
+        status_code=status.HTTP_200_OK,
+        content=jsonable_encoder({
+            "code": 401,
+            "msg": exc.detail,
+        })
+    )
