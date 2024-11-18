@@ -4,53 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c72a3621-16d1-42fa-bbb5-b40dfa541e7f" name="更改" comment="测试平台系列(29) 新增用例树--修改用例详情页后面可能暂停，后台作者已经改成fastapi，自己可能重新复制一份">
-      <change afterPath="$PROJECT_DIR$/app/dao/auth/UserDao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/dao/auth/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/dao/test_case/TestCaseAssertsDao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/excpetions/ParamsException.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/excpetions/RequestException.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/excpetions/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/testcase_asserts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/auth/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/auth/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/auth/user_schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/project/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/project/project.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/project/project_schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/request/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/request/http.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/request/http_schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/testcase/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/testcase/testcase.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/testcase/testcase_schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="c72a3621-16d1-42fa-bbb5-b40dfa541e7f" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/auth/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/auth/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/project/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/project/project.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/request/http.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/request/http.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/testcase/testcase.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/testcase/testcase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/project/ProjectDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/project/ProjectDao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/project/projectRoleDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/project/ProjectRoleDao.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handler/page.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/handler/page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/middleware/HttpClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/middleware/HttpClient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/middleware/Jwt.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/middleware/Jwt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/project.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/project_role.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/project_role.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/test_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/decorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/decorator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/pity.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/pity.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/executor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,7 +229,7 @@
       <workItem from="1724564577479" duration="90143000" />
       <workItem from="1725496119197" duration="1210000" />
       <workItem from="1725497367459" duration="416000" />
-      <workItem from="1731370482265" duration="25017000" />
+      <workItem from="1731370482265" duration="27668000" />
     </task>
     <task id="LOCAL-00001" summary="修复git练习">
       <created>1724218314075</created>
@@ -357,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1731391141759</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="测试平台系列(29) fastapi">
+      <created>1731702630896</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731702630896</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +353,8 @@
     <MESSAGE value="测试平台系列(24) 新增用例树" />
     <MESSAGE value="测试平台系列(24) 新增用例树--修改用例详情页后面可能暂停，后台作者已经改成fastapi，自己可能重新复制一份" />
     <MESSAGE value="测试平台系列(29) 新增用例树--修改用例详情页后面可能暂停，后台作者已经改成fastapi，自己可能重新复制一份" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试平台系列(29) 新增用例树--修改用例详情页后面可能暂停，后台作者已经改成fastapi，自己可能重新复制一份" />
+    <MESSAGE value="测试平台系列(29) fastapi" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试平台系列(29) fastapi" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -710,12 +676,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py</url>
-          <line>58</line>
+          <line>59</line>
           <option name="timeStamp" value="156" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py</url>
-          <line>62</line>
+          <line>63</line>
           <option name="timeStamp" value="157" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
