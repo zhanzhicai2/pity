@@ -35,3 +35,4 @@ def update_model(dist, source, update_user=None, not_null=False):
         if update_user:
             setattr(dist, 'update_user', update_user)
         setattr(dist, 'updated_at', datetime.now())
+

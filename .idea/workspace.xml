@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c72a3621-16d1-42fa-bbb5-b40dfa541e7f" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/app/dao/config/EnvironmentDao.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dao/config/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/environment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/schema/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/schema/environment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routers/config/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routers/config/environment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dao/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/executor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +236,7 @@
       <workItem from="1724564577479" duration="90143000" />
       <workItem from="1725496119197" duration="1210000" />
       <workItem from="1725497367459" duration="416000" />
-      <workItem from="1731370482265" duration="27668000" />
+      <workItem from="1731370482265" duration="33681000" />
     </task>
     <task id="LOCAL-00001" summary="修复git练习">
       <created>1724218314075</created>
@@ -322,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1731702630896</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="新增用例编辑功能">
+      <created>1731911748416</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731911748416</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +368,8 @@
     <MESSAGE value="测试平台系列(24) 新增用例树--修改用例详情页后面可能暂停，后台作者已经改成fastapi，自己可能重新复制一份" />
     <MESSAGE value="测试平台系列(29) 新增用例树--修改用例详情页后面可能暂停，后台作者已经改成fastapi，自己可能重新复制一份" />
     <MESSAGE value="测试平台系列(29) fastapi" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试平台系列(29) fastapi" />
+    <MESSAGE value="新增用例编辑功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增用例编辑功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
