@@ -12,7 +12,7 @@ from app.excpetions.ParamsException import ParamsError
 class EnvironmentForm(BaseModel):
     id: int = None
     name: str
-    remarks: str
+    remarks: str = None
 
     @validator("name")
     def name_not_empty(cls,v):
