@@ -20,7 +20,7 @@ class EnvironmentDao(object):
     def insert_env(data: EnvironmentForm, user):
         try:
             with Session() as session:
-                query = session.query(Environment).filter_by(name=data, delete_at=None).first()
+                query = session.query(Environment).filter_by(name=data.name, deleted_at=None).first()
                 if query is not None:
                     return f"环境{data.name}已存在"
                 env = Environment(**data.dict(), user=user)
@@ -49,6 +49,14 @@ class EnvironmentDao(object):
     # 查询
     @staticmethod
     def list_env(page, size, name=None):
+        """
+        获取环境列表的静态方法。
+        :param page: 当前页码（整数）。
+        :param size: 每页显示的记录数（整数）。
+        :param name: 环境名称的过滤条件（可选字符串）。
+        :return: 返回包含环境列表、总记录数和错误信息的元组。
+                 如果成功，错误信息为None；如果失败，则返回错误描述。
+        """
         try:
             search = [Environment.deleted_at == None]
             with Session() as session:

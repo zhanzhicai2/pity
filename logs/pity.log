@@ -334,3 +334,17 @@ WHERE pity_testcase_asserts.case_id = %(case_id_1)s AND pity_testcase_asserts.de
 [parameters: {'case_id_1': 1}]
 (Background on this error at: http://sqlalche.me/e/14/f405)
 [2024-11-16 04:13:31.751992] ERROR: UserDao: 获取测试用例失败: exceptions must derive from BaseException
+[2024-11-19 22:33:36.885850] ERROR: UserDao: 新增环境: fat失败, Entity namespace for "pity_environment" has no property "delete_at"
+[2024-11-19 22:34:22.535712] ERROR: UserDao: 新增环境: fat失败, Entity namespace for "pity_environment" has no property "delete_at"
+[2024-11-19 22:34:57.739452] ERROR: UserDao: 新增环境: fat失败, Entity namespace for "pity_environment" has no property "delete_at"
+[2024-11-19 22:35:32.045980] ERROR: UserDao: 新增环境: fat失败, Python type EnvironmentForm cannot be converted
+[2024-11-19 22:39:10.279414] ERROR: UserDao: 新增环境: fat失败, Python type EnvironmentForm cannot be converted
+[2024-11-19 22:39:45.056700] ERROR: UserDao: 新增环境: 2失败, Python type EnvironmentForm cannot be converted
+[2024-11-20 12:00:49.096688] ERROR: UserDao: 新增环境: fat失败, (mysql.connector.errors.IntegrityError) 1062 (23000): Duplicate entry 'fat' for key 'pity_environment.name'
+[SQL: INSERT INTO pity_environment (id, name, created_at, updated_at, deleted_at, create_user, update_user, remarks) VALUES (%(id)s, %(name)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(create_user)s, %(update_user)s, %(remarks)s)]
+[parameters: {'id': 0, 'name': 'fat', 'created_at': datetime.datetime(2024, 11, 20, 12, 0, 49, 81897), 'updated_at': datetime.datetime(2024, 11, 20, 12, 0, 49, 81907), 'deleted_at': None, 'create_user': 2, 'update_user': 2, 'remarks': '的'}]
+(Background on this error at: http://sqlalche.me/e/14/gkpj)
+[2024-11-20 12:00:54.138148] ERROR: UserDao: 新增环境: fat失败, (mysql.connector.errors.IntegrityError) 1062 (23000): Duplicate entry 'fat' for key 'pity_environment.name'
+[SQL: INSERT INTO pity_environment (id, name, created_at, updated_at, deleted_at, create_user, update_user, remarks) VALUES (%(id)s, %(name)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(create_user)s, %(update_user)s, %(remarks)s)]
+[parameters: {'id': 0, 'name': 'fat', 'created_at': datetime.datetime(2024, 11, 20, 12, 0, 54, 136601), 'updated_at': datetime.datetime(2024, 11, 20, 12, 0, 54, 136609), 'deleted_at': None, 'create_user': 2, 'update_user': 2, 'remarks': '的'}]
+(Background on this error at: http://sqlalche.me/e/14/gkpj)
