@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c72a3621-16d1-42fa-bbb5-b40dfa541e7f" name="更改" comment="修改remarks">
-      <change afterPath="$PROJECT_DIR$/app/dao/config/GConfigDao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/gconfig.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/schema/gconfig.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/config/gconfig.py" afterDir="false" />
+    <list default="true" id="c72a3621-16d1-42fa-bbb5-b40dfa541e7f" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/config/EnvironmentDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/config/EnvironmentDao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/environment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/config/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/config/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dao/config/GConfigDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/config/GConfigDao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/schema/gconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/schema/gconfig.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/config/gconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/config/gconfig.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/pity.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/pity.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +230,7 @@
       <workItem from="1724564577479" duration="90143000" />
       <workItem from="1725496119197" duration="1210000" />
       <workItem from="1725497367459" duration="416000" />
-      <workItem from="1731370482265" duration="42668000" />
+      <workItem from="1731370482265" duration="53121000" />
     </task>
     <task id="LOCAL-00001" summary="修复git练习">
       <created>1724218314075</created>
@@ -350,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1731954004218</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="新增全局变量功能">
+      <created>1732075371240</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732075371240</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,7 +386,8 @@
     <MESSAGE value="新增用例编辑功能" />
     <MESSAGE value="新增环境管理功能" />
     <MESSAGE value="修改remarks" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改remarks" />
+    <MESSAGE value="新增全局变量功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增全局变量功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -514,26 +516,6 @@
           <url>file://$PROJECT_DIR$/app/controllers/project/project.py</url>
           <line>35</line>
           <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/handler/fatcory.py</url>
-          <line>53</line>
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/handler/fatcory.py</url>
-          <line>56</line>
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/handler/fatcory.py</url>
-          <line>54</line>
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/handler/fatcory.py</url>
-          <line>65</line>
-          <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/utils/decorator.py</url>
@@ -716,41 +698,6 @@
           <option name="timeStamp" value="157" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/routers/auth/user.py</url>
-          <line>24</line>
-          <option name="timeStamp" value="158" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/routers/auth/user.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="159" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/routers/auth/user.py</url>
-          <line>27</line>
-          <option name="timeStamp" value="160" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/routers/auth/user.py</url>
-          <line>28</line>
-          <option name="timeStamp" value="161" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/routers/auth/user.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="162" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/routers/auth/user.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="163" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/routers/auth/user.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="164" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/dao/auth/UserDao.py</url>
           <line>49</line>
           <option name="timeStamp" value="165" />
@@ -760,6 +707,31 @@
           <line>50</line>
           <option name="timeStamp" value="166" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/routers/config/gconfig.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="167" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/routers/config/gconfig.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/routers/config/gconfig.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/models/schema/gconfig.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="174" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/models/schema/gconfig.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="175" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -767,7 +739,7 @@
     <SUITE FILE_PATH="coverage/pity$__init__.coverage" NAME="__init__ 覆盖结果" MODIFIED="1724528526707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/models" />
     <SUITE FILE_PATH="coverage/pity$pity.coverage" NAME="pity 覆盖结果" MODIFIED="1731573079485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pity$app.coverage" NAME="run 覆盖结果" MODIFIED="1724362217649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pity$main.coverage" NAME="main 覆盖结果" MODIFIED="1732026565828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pity$main.coverage" NAME="main 覆盖结果" MODIFIED="1732177338516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pity$run.coverage" NAME="run 覆盖结果" MODIFIED="1725497469860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pity$config.coverage" NAME="config 覆盖结果" MODIFIED="1724058835991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

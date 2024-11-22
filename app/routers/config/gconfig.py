@@ -23,16 +23,16 @@ async def list_gconfig(page: int = 1, size: int = 8, env: int = None, key: str =
 
 
 # 插入
-@router.get("/gconfig/insert")
+@router.post("/gconfig/insert")
 async def insert_gconfig(data: GConfigForm, user_info=Depends(Permission(Config.ADMIN))):
-    err = GConfigDao.insert_gconfig(data, user_info["id"])
+    err = GConfigDao.insert_gconfig(data, user_info['id'])
     if err:
         return dict(code=110, msg=err)
     return dict(code=0, msg="操作成功")
 
 
 # 更新
-@router.get("/gconfig/update")
+@router.post("/gconfig/update")
 async def update_gconfig(data: GConfigForm, user_info=Depends(Permission(Config.ADMIN))):
     err = GConfigDao.update_gconfig(data, user_info["id"])
     if err:

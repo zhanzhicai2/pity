@@ -348,3 +348,15 @@ WHERE pity_testcase_asserts.case_id = %(case_id_1)s AND pity_testcase_asserts.de
 [SQL: INSERT INTO pity_environment (id, name, created_at, updated_at, deleted_at, create_user, update_user, remarks) VALUES (%(id)s, %(name)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(create_user)s, %(update_user)s, %(remarks)s)]
 [parameters: {'id': 0, 'name': 'fat', 'created_at': datetime.datetime(2024, 11, 20, 12, 0, 54, 136601), 'updated_at': datetime.datetime(2024, 11, 20, 12, 0, 54, 136609), 'deleted_at': None, 'create_user': 2, 'update_user': 2, 'remarks': '的'}]
 (Background on this error at: http://sqlalche.me/e/14/gkpj)
+[2024-11-21 16:23:44.259038] ERROR: UserDao: 新增变量: 1失败, (mysql.connector.errors.DatabaseError) 1366 (HY000): Incorrect integer value: 'fat' for column 'env' at row 1
+[SQL: INSERT INTO pity_gconfig (id, env, `key`, value, key_type, enable, created_at, updated_at, deleted_at, create_user, update_user) VALUES (%(id)s, %(env)s, %(key)s, %(value)s, %(key_type)s, %(enable)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(create_user)s, %(update_user)s)]
+[parameters: {'id': 0, 'env': 'fat', 'key': '1', 'value': '“俄文”', 'key_type': 0, 'enable': 1, 'created_at': datetime.datetime(2024, 11, 21, 16, 23, 44, 256683), 'updated_at': datetime.datetime(2024, 11, 21, 16, 23, 44, 256691), 'deleted_at': None, 'create_user': 2, 'update_user': 2}]
+(Background on this error at: http://sqlalche.me/e/14/4xp6)
+[2024-11-21 16:24:24.171190] ERROR: UserDao: 新增变量: 1失败, (mysql.connector.errors.DatabaseError) 1366 (HY000): Incorrect integer value: 'we' for column 'env' at row 1
+[SQL: INSERT INTO pity_gconfig (id, env, `key`, value, key_type, enable, created_at, updated_at, deleted_at, create_user, update_user) VALUES (%(id)s, %(env)s, %(key)s, %(value)s, %(key_type)s, %(enable)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(create_user)s, %(update_user)s)]
+[parameters: {'id': 0, 'env': 'we', 'key': '1', 'value': '“俄文”', 'key_type': 0, 'enable': 1, 'created_at': datetime.datetime(2024, 11, 21, 16, 24, 24, 170188), 'updated_at': datetime.datetime(2024, 11, 21, 16, 24, 24, 170194), 'deleted_at': None, 'create_user': 2, 'update_user': 2}]
+(Background on this error at: http://sqlalche.me/e/14/4xp6)
+[2024-11-21 16:24:56.906872] ERROR: UserDao: 新增变量: 1失败, (mysql.connector.errors.DatabaseError) 1366 (HY000): Incorrect integer value: '儿童' for column 'env' at row 1
+[SQL: INSERT INTO pity_gconfig (id, env, `key`, value, key_type, enable, created_at, updated_at, deleted_at, create_user, update_user) VALUES (%(id)s, %(env)s, %(key)s, %(value)s, %(key_type)s, %(enable)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(create_user)s, %(update_user)s)]
+[parameters: {'id': 0, 'env': '儿童', 'key': '1', 'value': '“俄文”', 'key_type': 0, 'enable': 1, 'created_at': datetime.datetime(2024, 11, 21, 16, 24, 56, 905618), 'updated_at': datetime.datetime(2024, 11, 21, 16, 24, 56, 905625), 'deleted_at': None, 'create_user': 2, 'update_user': 2}]
+(Background on this error at: http://sqlalche.me/e/14/4xp6)

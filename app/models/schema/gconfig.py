@@ -11,7 +11,8 @@ class GConfigForm(BaseModel):
     id: int = None
     key: str
     value: str
-    env: str = None
+    env: int = None
+    # env: str = None  博主不一样
     key_type: int
     enable: bool
 
@@ -19,6 +20,7 @@ class GConfigForm(BaseModel):
     def name_not_empty(cls, v):
         if isinstance(v, str) and len(v.strip()) == 0:
             raise ParamsError("不能为空")
-        if not v:
-            raise ParamsError("不能为空")
+        if not isinstance(v, int):
+            if not v:
+                raise ParamsError("不能为空")
         return v
