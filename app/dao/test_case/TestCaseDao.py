@@ -80,19 +80,18 @@ class TestCaseDao(object):
         """
         try:
             with Session() as session:
-                data= session.query(TestCase).filter_by(id=test_case.id, deleted_at=None).first()
+                data = session.query(TestCase).filter_by(id=test_case.id, deleted_at=None).first()
                 if data is None:
                     return "用例不存在"
-                update_model(data, test_case,user)
+                update_model(data, test_case, user)
                 session.commit()
         except Exception as e:
             TestCaseDao.log.error(f"编辑用例失败: {str(e)}")
             return f"编辑用例失败: {str(e)}"
         return None
 
-
     @staticmethod
-    def query_test_case(case_id):
+    def query_test_case(case_id) -> [TestCase, str]:
         try:
             with Session() as session:
                 data = session.query(TestCase).filter_by(id=case_id, deleted_at=None).first()
