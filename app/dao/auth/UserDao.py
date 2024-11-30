@@ -3,8 +3,7 @@
 # @Author: zhanzhicai
 # @Desc : 
 # @Date  :  2024/11/14
-
-
+import random
 from datetime import datetime
 from sqlalchemy import or_
 from app.middleware.Jwt import UserToken
@@ -15,6 +14,27 @@ from app.utils.logger import Log
 
 class UserDao(object):
     log = Log("UserDao")
+
+    @staticmethod
+    def register_for_github(username, name, email, avatar):
+        try:
+            with Session() as session:
+                user = session.query(User).filter(or_(User.username == username, User.email == email)).first()
+                if user:
+                    # 如果存在，则给用户更新信息
+                    user.last_login_at = datetime.now()
+                    user.name = name
+                    user.avatar = avatar
+                else:
+                    random_pwd = random.randint(100000, 999999)
+                    user = User(username, name, UserToken.add_salt(str(random_pwd)), email, avatar)
+                    session.add(user)
+                session.commit()
+                session.refresh(user)
+                return user
+        except Exception as e:
+            UserDao.log.error(f"Github用户登录失败: {str(e)}")
+            raise Exception("登录失败")
 
     @staticmethod
     def register_user(username, name, password, email):

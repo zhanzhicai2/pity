@@ -31,3 +31,17 @@ class Config(object):
     GUEST = 0
     MANAGER = 1
     ADMIN = 2
+
+    # github access_token地址
+    GITHUB_ACCESS = "https://github.com/login/oauth/access_token"
+
+    # github获取用户信息
+    GITHUB_USER = "https://api.github.com/user"
+
+    # client_id
+    CLIENT_ID = "Ov23liVwVosaCVRmkjg2"
+    # CLIENT_ID = "c46c7ae33442d13498cd"
+
+    # SECRET
+    SECRET_KEY = "490e04ca7426209c0b43b4ae4884a70e01c7c785"
+    # SECRET_KEY = "c79fafe58ff45f6b5b51ddde70d2d645209e38b9"

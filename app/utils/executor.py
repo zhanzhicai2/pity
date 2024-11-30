@@ -7,6 +7,7 @@ from app.dao.test_case.TestCaseAssertsDao import TestCaseAssertsDao
 from app.dao.test_case.TestCaseDao import TestCaseDao
 from app.middleware.HttpClient import Request
 from app.models.test_case import TestCase
+from app.utils.decorator import case_log
 from app.utils.gconfig_parser import StringGConfigParser, JSONGConfigParser, YamlGConfigParser
 from app.utils.logger import Log
 
@@ -19,16 +20,32 @@ class Executor(object):
     # 需要替换全局变量的字段
     fields = ['body', 'url', 'request_header']
 
-    @staticmethod
-    def parse_gconfig(data: TestCase, *fields):
-        for f in fields:
-            Executor.parse_field(data, f)
+    def __init__(self):
+        self._logger = list()
 
-    @staticmethod
-    def parse_field(data: TestCase, field):
+    @property
+    def logger(self):
+        return self._logger
+
+    @case_log
+    def parse_gconfig(self, data: TestCase, *fields):
+        """
+            解析全局变量
+        """
+        for f in fields:
+            self.parse_field(data, f)
+
+    @case_log
+    def parse_field(self, data: TestCase, field):
+        """
+        解析字段
+        :param data:
+        :param field:
+        :return:
+        """
         try:
             field_origin = getattr(data, field)
-            variables = Executor.get_el_expression(field_origin)
+            variables = self.get_el_expression(field_origin)
             for v in variables:
                 key = v.split(".")[0]
                 # TODO 注意此处实时查询数据库，后续需要改成Redis
@@ -44,8 +61,11 @@ class Executor(object):
             Executor.log.error(f"查询全局变量失败, error: {str(e)}")
             raise
 
-    @staticmethod
-    def get_parser(key_type):
+    @case_log
+    def get_parser(self, key_type):
+        """
+        获取变量解析器
+        """
         if key_type == 0:
             return StringGConfigParser.parse
         if key_type == 1:
@@ -54,15 +74,17 @@ class Executor(object):
             return YamlGConfigParser.parse
         raise Exception(f"全局变量类型: {key_type}不合法, 请检查!")
 
-    @staticmethod
-    def run(case_id: int):
+    def run(self, case_id: int):
+        """
+        开始执行测试用例
+        """
         result = dict()
         try:
             case_info, err = TestCaseDao.query_test_case(case_id)
             if err:
                 return result, err
             # Step1: 替换全局变量
-            Executor.parse_gconfig(case_info, *Executor.fields)
+            self.parse_gconfig(case_info, *Executor.fields)
             # 获取断言
             asserts, err = TestCaseAssertsDao.list_test_case_asserts(case_id)
             if err:
@@ -77,39 +99,106 @@ class Executor(object):
                 body = case_info.body
             else:
                 body = None
-            request_obj = Request(case_info.url, headers=headers, data=body)
+            # request_obj = Request(case_info.url, headers=headers, data=body)
+            request_obj = Request(case_info.url, headers=headers, data=body.encode() if body is not None else body)
             method = case_info.request_method.upper()
             response_info = request_obj.request(method)
+            response_info["url"] = case_info.url
+            response_info["request_method"] = method
             # 执行完成进行断言
-            response_info["asserts"] = Executor.my_assert(asserts, response_info)
+            response_info["asserts"] = self.my_assert(asserts, response_info)
+            # 日志输出
+            response_info["logs"] = "\n".join(self.logger)
+            print(response_info["logs"])
             return response_info, None
         except Exception as e:
             Executor.log.error(f"执行用例失败: {str(e)}")
             return result, f"执行用例失败: {str(e)}"
 
-    @classmethod
-    def my_assert(cls, asserts: List, response_info):
+    @staticmethod
+    def get_time():
+        return datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+    @case_log
+    def my_assert(self, asserts: List, response_info)->dict:
+        """
+        断言验证
+        :param asserts:
+        :param response_info:
+        :return:
+        """
         result = dict()
+        if len(asserts) == 0:
+            self.logger.append("[{}]: 未设置断言, 用例结束".format(Executor.get_time()))
+            return result
+
         for item in asserts:
-            a, err = Executor.parse_variable(response_info, item.expected)
+            a, err = self.parse_variable(response_info, item.expected)
             if err:
                 result[item.id] = {"status": False, "msg": f"解析变量失败, {err}"}
                 continue
-            b, err = Executor.parse_variable(response_info, item.actually)
+            b, err = self.parse_variable(response_info, item.actually)
             if err:
                 result[item.id] = {"status": False, "msg": f"解析变量失败, {err}"}
                 continue
             try:
-                a, b = Executor.translate(a), Executor.translate(b)
-                status, err = Executor.ops(item.assert_type, a, b)
+                a, b = self.translate(a), self.translate(b)
+                status, err = self.ops(item.assert_type, a, b)
                 result[item.id] = {"status": status, "msg": err}
             except Exception as e:
                 result[item.id] = {"status": False, "msg": str(e)}
         return result
 
-    @classmethod
-    def parse_variable(cls, response_info, string: str):
-        data = Executor.get_el_expression(string)
+    @case_log
+    def ops(self, assert_type: str, a, b) -> (bool, str):
+        """
+        通过断言类型进行校验
+        :param assert_type:
+        :param a:
+        :param b:
+        :return:
+        """
+        if assert_type == "equal":
+            if a == b:
+                return True, f"预期结果: {a} == 实际结果: {b}"
+            return False, f"预期结果: {a} != 实际结果: {b}"
+        if assert_type == "not_equal":
+            if a != b:
+                return True, f"预期结果: {a} != 实际结果: {b}"
+            return False, f"预期结果: {a} == 实际结果: {b}"
+        if assert_type == "in":
+            if a in b:
+                return True, f"预期结果: {a} in 实际结果: {b}"
+            return False, f"预期结果: {a} in 实际结果: {b}"
+        return False, "不支持的断言方式"
+
+    @case_log
+    def get_el_expression(self, string: str):
+        """
+        获取字符串中的el表达式
+        :param string:
+        :return:
+        """
+        return re.findall(Executor.pattern, string)
+
+    @case_log
+    def translate(self, data):
+        """
+        反序列化为Python对象
+        :param data:
+        :return:
+        """
+        return json.loads(data)
+
+    @case_log
+    def parse_variable(self, response_info, string: str):
+        """
+        解析返回response中的变量
+        :param response_info:
+        :param string:
+        :return:
+        """
+        data = self.get_el_expression(string)
         if len(data) == 0:
             return string, None
         data = data[0]
@@ -126,36 +215,3 @@ class Executor(object):
         except Exception as e:
             return None, f"获取变量失败: {str(e)}"
         return json.dumps(result, ensure_ascii=False), None
-
-    @classmethod
-    def translate(cls, data):
-        return json.loads(data)
-
-    @classmethod
-    def ops(cls, assert_type: str, a, b) -> (bool, str):
-        if assert_type == "equal":
-            if a == b:
-                return True, f"预期结果: {a} == 实际结果: {b}"
-            return False, f"预期结果: {a} != 实际结果: {b}"
-        if assert_type == "not_equal":
-            if a != b:
-                return True, f"预期结果: {a} != 实际结果: {b}"
-            return False, f"预期结果: {a} == 实际结果: {b}"
-        if assert_type == "in":
-            if a in b:
-                return True, f"预期结果: {a} in 实际结果: {b}"
-            return False, f"预期结果: {a} in 实际结果: {b}"
-        return False, "不支持的断言方式"
-
-    @classmethod
-    def get_el_expression(cls, string: str):
-        """
-        获取el表达式
-        :param string:
-        :return:
-        """
-        return re.findall(Executor.pattern, string)
-
-
-
-

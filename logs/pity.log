@@ -382,3 +382,163 @@ WHERE pity_testcase_asserts.case_id = %(case_id_1)s AND pity_testcase_asserts.de
 [2024-11-27 00:58:41.887211] ERROR: UserDao: 执行用例失败: 'NoneType' object has no attribute 'encode'
 [2024-11-27 01:02:01.692638] ERROR: UserDao: 执行用例失败: 'NoneType' object has no attribute 'encode'
 [2024-11-27 01:07:03.888436] ERROR: UserDao: 执行用例失败: 'NoneType' object has no attribute 'encode'
+[2024-11-28 11:48:25.578562] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 11:48:28.157406] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:00:25.705734] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:01:03.768850] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:01:51.521420] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:01:54.603630] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:02:11.154571] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:02:11.722447] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:02:44.362314] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:02:46.574240] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:02:47.439042] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:02:47.691505] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:05:39.115081] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:05:40.246901] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:05:40.530357] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:05:40.879037] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:05:41.182259] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:05:41.463334] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:07:23.244939] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 12:07:32.413255] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 13:02:05.318138] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 13:02:19.919973] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 13:02:25.922927] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 13:02:57.352647] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 13:50:55.926715] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 14:21:57.816381] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 15:52:47.981422] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 15:54:27.316023] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 17:50:49.985170] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 17:51:34.819584] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 17:51:55.042101] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 22:43:01.614376] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 22:43:21.633303] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 22:45:54.965798] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 22:54:26.918604] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-28 23:15:18.194324] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-29 00:07:40.468546] ERROR: UserDao: 获取用户列表失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.deleted_at IS NULL]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 00:07:58.789337] ERROR: UserDao: 获取用户列表失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.deleted_at IS NULL]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 00:08:27.869492] ERROR: UserDao: 用户2登录失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.username = %(username_1)s AND pity_user.password = %(password_1)s AND pity_user.deleted_at IS NULL 
+ LIMIT %(param_1)s]
+[parameters: {'username_1': '2', 'password_1': '92152227466766749d9d9da31c41ac1c', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 00:08:32.703757] ERROR: UserDao: 用户2登录失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.username = %(username_1)s AND pity_user.password = %(password_1)s AND pity_user.deleted_at IS NULL 
+ LIMIT %(param_1)s]
+[parameters: {'username_1': '2', 'password_1': '92152227466766749d9d9da31c41ac1c', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 00:08:37.001957] ERROR: UserDao: 用户2登录失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.username = %(username_1)s AND pity_user.password = %(password_1)s AND pity_user.deleted_at IS NULL 
+ LIMIT %(param_1)s]
+[parameters: {'username_1': '2', 'password_1': '92152227466766749d9d9da31c41ac1c', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 11:35:43.921549] ERROR: UserDao: 用户2登录失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.username = %(username_1)s AND pity_user.password = %(password_1)s AND pity_user.deleted_at IS NULL 
+ LIMIT %(param_1)s]
+[parameters: {'username_1': '2', 'password_1': '92152227466766749d9d9da31c41ac1c', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 11:35:45.565199] ERROR: UserDao: 用户2登录失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.username = %(username_1)s AND pity_user.password = %(password_1)s AND pity_user.deleted_at IS NULL 
+ LIMIT %(param_1)s]
+[parameters: {'username_1': '2', 'password_1': '92152227466766749d9d9da31c41ac1c', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 11:46:11.322171] ERROR: UserDao: 用户2登录失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.username = %(username_1)s AND pity_user.password = %(password_1)s AND pity_user.deleted_at IS NULL 
+ LIMIT %(param_1)s]
+[parameters: {'username_1': '2', 'password_1': '92152227466766749d9d9da31c41ac1c', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 13:01:00.470122] ERROR: UserDao: Github用户登录失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.username = %(username_1)s OR pity_user.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'username_1': 'zhanzhicai2', 'email_1': '1610893869@qq.com', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 13:01:08.193534] ERROR: UserDao: Github用户登录失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.username = %(username_1)s OR pity_user.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'username_1': 'zhanzhicai2', 'email_1': '1610893869@qq.com', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 13:02:23.893648] ERROR: UserDao: 用户注册失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.username = %(username_1)s OR pity_user.email = %(email_1)s]
+[parameters: {'username_1': '5', 'email_1': '5@163.com'}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 13:02:25.868427] ERROR: UserDao: 用户注册失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.username = %(username_1)s OR pity_user.email = %(email_1)s]
+[parameters: {'username_1': '5', 'email_1': '5@163.com'}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 13:02:26.484542] ERROR: UserDao: 用户注册失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.username = %(username_1)s OR pity_user.email = %(email_1)s]
+[parameters: {'username_1': '5', 'email_1': '5@163.com'}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 13:02:40.940158] ERROR: UserDao: 用户注册失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.username = %(username_1)s OR pity_user.email = %(email_1)s]
+[parameters: {'username_1': '5', 'email_1': '5@163.com'}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 13:02:54.444809] ERROR: UserDao: Github用户登录失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.username = %(username_1)s OR pity_user.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'username_1': 'zhanzhicai2', 'email_1': '1610893869@qq.com', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 13:02:58.557559] ERROR: UserDao: Github用户登录失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.username = %(username_1)s OR pity_user.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'username_1': 'zhanzhicai2', 'email_1': '1610893869@qq.com', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 13:05:24.785496] ERROR: UserDao: 用户2登录失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.username = %(username_1)s AND pity_user.password = %(password_1)s AND pity_user.deleted_at IS NULL 
+ LIMIT %(param_1)s]
+[parameters: {'username_1': '2', 'password_1': '92152227466766749d9d9da31c41ac1c', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 13:06:02.101293] ERROR: UserDao: 用户2登录失败: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'pity_user.avatar' in 'field list'
+[SQL: SELECT pity_user.id AS pity_user_id, pity_user.username AS pity_user_username, pity_user.name AS pity_user_name, pity_user.password AS pity_user_password, pity_user.email AS pity_user_email, pity_user.`role` AS pity_user_role, pity_user.created_at AS pity_user_created_at, pity_user.updated_at AS pity_user_updated_at, pity_user.deleted_at AS pity_user_deleted_at, pity_user.last_login_at AS pity_user_last_login_at, pity_user.avatar AS pity_user_avatar 
+FROM pity_user 
+WHERE pity_user.username = %(username_1)s AND pity_user.password = %(password_1)s AND pity_user.deleted_at IS NULL 
+ LIMIT %(param_1)s]
+[parameters: {'username_1': '2', 'password_1': '92152227466766749d9d9da31c41ac1c', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2024-11-29 13:44:18.707961] ERROR: UserDao: Github用户登录失败: (mysql.connector.errors.IntegrityError) 1048 (23000): Column 'email' cannot be null
+[SQL: INSERT INTO pity_user (username, name, password, email, `role`, created_at, updated_at, deleted_at, last_login_at, avatar) VALUES (%(username)s, %(name)s, %(password)s, %(email)s, %(role)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(last_login_at)s, %(avatar)s)]
+[parameters: {'username': None, 'name': None, 'password': 'bb79f4ab3de312ca9cc3fb20a3d538ce', 'email': None, 'role': 0, 'created_at': datetime.datetime(2024, 11, 29, 13, 44, 18, 705014), 'updated_at': datetime.datetime(2024, 11, 29, 13, 44, 18, 705029), 'deleted_at': None, 'last_login_at': None, 'avatar': None}]
+(Background on this error at: http://sqlalche.me/e/14/gkpj)
+[2024-11-29 13:57:16.453470] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-11-29 13:57:22.286539] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable

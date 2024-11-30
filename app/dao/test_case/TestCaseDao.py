@@ -1,6 +1,10 @@
 from collections import defaultdict
+
+from sqlalchemy import desc
+
 from app.dao.test_case.TestCaseAssertsDao import TestCaseAssertsDao
 from app.models import Session, update_model
+from app.models.constructor import Constructor
 from app.models.test_case import TestCase
 from app.routers.testcase.testcase_schema import TestCaseForm
 from app.utils.logger import Log
@@ -101,3 +105,27 @@ class TestCaseDao(object):
         except Exception as e:
             TestCaseDao.log.error(f"查询用例失败: {str(e)}")
             return None, f"查询用例失败: {str(e)}"
+
+    #
+
+    @staticmethod
+    def list_testcase_tree(projects) -> [List, dict]:
+
+
+
+    # 根据case_id查询所有构造器方法
+    @staticmethod
+    def select_constructor(case_id: int):
+        """
+        通过case_id获取用例构造数据
+        :param case_id:
+        :return:
+        """
+        try:
+            with Session() as session:
+                data = session.query(Constructor).filter_by(case_id=case_id,deleted_at = None).order_by(desc(Constructor.created_at)).all()
+                return data
+        except Exception as e:
+            TestCaseDao.log.error(f"查询构造数据失败: {str(e)}")
+            raise Exception(f"查询构造数据失败")
+
