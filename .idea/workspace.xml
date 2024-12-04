@@ -5,32 +5,86 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c72a3621-16d1-42fa-bbb5-b40dfa541e7f" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/alembic.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alembic/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alembic/env.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alembic/script.py.mako" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alembic/versions/229c84671864_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/dao/test_case/ConstructorDao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/constructor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/schema/constructor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements_copy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dao/test_case/TestReport.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dao/test_case/TestResult.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/middleware/AsyncHttpClient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/middleware/AsyncHttpClientTest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/report.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/result.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/constructor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/CNAME" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/asset-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/home_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/icons/icon-128x128.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/icons/icon-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/icons/icon-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/layouts__BasicLayout.e9f476f3.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/layouts__BasicLayout.f5ba40a7.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/layouts__BlankLayout.0e35c376.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/layouts__SecurityLayout.9e23f069.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/layouts__UserLayout.016fc469.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/layouts__UserLayout.1f9aa863.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__404.acec162a.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__Admin.35a7d1b3.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__Admin.feb5474f.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__Environment.3536b6a3.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__Environment.86d1c58e.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__GConfig.66a1f812.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__GConfig.9ccc5762.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__Project__Project.05e3f5a6.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__Project__Project.58f0bb76.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__Project__ProjectDetail.24a5de16.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__Project__ProjectDetail.9f3bf9e6.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__Request.94af71de.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__Request.d77d4bad.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__TableList.de22c5ba.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__TableList.f9d5259c.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__User__login.34113024.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__User__login.cc2c48dd.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__Welcome.05b2dfea.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__Welcome.72864ae1.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/p__testRequest.a797125f.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/pro_icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/static/bg.29259444.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/static/logo.7edeb0ec.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/umi.21992b5d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/umi.75a41841.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/vendors~layouts__BasicLayout~p__Admin~p__Environment~p__GConfig~p__Project__Project~p__Project__Proj~27755160.018eff57.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/vendors~layouts__BasicLayout~p__Admin~p__Environment~p__GConfig~p__Project__Project~p__Project__Proj~27755160.2b964e79.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/vendors~layouts__BasicLayout~p__Admin~p__Environment~p__GConfig~p__Project__Project~p__Project__Proj~8b5113d1.1c922d68.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/vendors~layouts__BasicLayout~p__Admin~p__Environment~p__GConfig~p__Project__Project~p__Project__Proj~8b5113d1.eddfefbb.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/vendors~layouts__BasicLayout~p__Admin~p__Environment~p__GConfig~p__Project__Project~p__Project__Proj~e51a1903.3867ea8a.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/vendors~layouts__BasicLayout~p__Admin~p__Environment~p__GConfig~p__Project__Project~p__Project__Proj~e51a1903.78beac42.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/vendors~layouts__BasicLayout~p__Environment~p__GConfig~p__Project__Project~p__Project__ProjectDetail~70830196.595ce7cc.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/vendors~layouts__BasicLayout~p__Environment~p__GConfig~p__Project__Project~p__Project__ProjectDetail~70830196.8640560f.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/vendors~layouts__UserLayout.0c75f8b2.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/vendors~layouts__UserLayout.2c52b503.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/vendors~p__Admin~p__User__login.4d41d4c2.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/vendors~p__Request~p__User__login~p__testRequest.be46b406.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/vendors~p__Request~p__User__login~p__testRequest.fde99608.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/vendors~p__Welcome.0e455c3c.async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/vendors~p__Welcome.bf580272.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/vendors~p__testRequest.4353c367.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/vendors~p__testRequest.9c782e5f.async.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dao/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/auth/UserDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/auth/UserDao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/project/ProjectDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/project/ProjectDao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dao/config/GConfigDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/config/GConfigDao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dao/test_case/TestCaseAssertsDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/test_case/TestCaseAssertsDao.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/middleware/HttpClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/middleware/HttpClient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/middleware/Jwt.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/middleware/Jwt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/test_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/auth/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/auth/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/constructor.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/constructor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/project/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/project/project.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routers/request/http.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/request/http.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routers/testcase/testcase.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/testcase/testcase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/decorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/decorator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/utils/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/executor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/gconfig_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/gconfig_parser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/pity.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/pity.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +139,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/zhicaizhan/Desktop/py/wuranxu/pity",
+    "last_opened_file_path": "/Users/zhicaizhan/Desktop/py/wuranxu/pity/statics",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -101,6 +155,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/statics" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -279,7 +334,7 @@
       <workItem from="1724564577479" duration="90143000" />
       <workItem from="1725496119197" duration="1210000" />
       <workItem from="1725497367459" duration="416000" />
-      <workItem from="1731370482265" duration="84072000" />
+      <workItem from="1731370482265" duration="104592000" />
     </task>
     <task id="LOCAL-00001" summary="修复git练习">
       <created>1724218314075</created>
@@ -421,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1732643485828</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="测试平台系列(42) 编写数据构造器功能（下）没有写完">
+      <created>1732950717549</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1732950717549</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +521,8 @@
     <MESSAGE value="新增全局变量功能" />
     <MESSAGE value="测试平台系列(36)" />
     <MESSAGE value="测试平台系列(36) 使用全局变量" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试平台系列(36) 使用全局变量" />
+    <MESSAGE value="测试平台系列(42) 编写数据构造器功能（下）没有写完" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试平台系列(42) 编写数据构造器功能（下）没有写完" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -761,12 +824,12 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py</url>
-          <line>63</line>
+          <line>65</line>
           <option name="timeStamp" value="156" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py</url>
-          <line>67</line>
+          <line>69</line>
           <option name="timeStamp" value="157" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -836,17 +899,17 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/routers/request/http.py</url>
-          <line>32</line>
+          <line>35</line>
           <option name="timeStamp" value="187" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/routers/request/http.py</url>
-          <line>33</line>
+          <line>36</line>
           <option name="timeStamp" value="188" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/utils/executor.py</url>
-          <line>76</line>
+          <line>160</line>
           <option name="timeStamp" value="189" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -856,32 +919,27 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/routers/request/http.py</url>
-          <line>35</line>
+          <line>38</line>
           <option name="timeStamp" value="191" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/utils/executor.py</url>
-          <line>101</line>
-          <option name="timeStamp" value="192" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/utils/executor.py</url>
-          <line>103</line>
+          <line>211</line>
           <option name="timeStamp" value="193" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/utils/executor.py</url>
-          <line>104</line>
+          <line>212</line>
           <option name="timeStamp" value="194" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/utils/executor.py</url>
-          <line>108</line>
+          <line>216</line>
           <option name="timeStamp" value="195" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/utils/executor.py</url>
-          <line>81</line>
+          <line>172</line>
           <option name="timeStamp" value="196" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -897,7 +955,7 @@
     <SUITE FILE_PATH="coverage/pity$gconfig_parser.coverage" NAME="gconfig_parser 覆盖结果" MODIFIED="1732614537657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/utils" />
     <SUITE FILE_PATH="coverage/pity$pity.coverage" NAME="pity 覆盖结果" MODIFIED="1731573079485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pity$app.coverage" NAME="run 覆盖结果" MODIFIED="1724362217649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pity$main.coverage" NAME="main 覆盖结果" MODIFIED="1732937389667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pity$main.coverage" NAME="main 覆盖结果" MODIFIED="1733202013866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pity$run.coverage" NAME="run 覆盖结果" MODIFIED="1725497469860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pity$config.coverage" NAME="config 覆盖结果" MODIFIED="1724058835991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

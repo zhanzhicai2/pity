@@ -1,11 +1,16 @@
+import asyncio
 import json
 import re
+from datetime import datetime
 from typing import List
 
 from app.dao.config.GConfigDao import GConfigDao
 from app.dao.test_case.TestCaseAssertsDao import TestCaseAssertsDao
 from app.dao.test_case.TestCaseDao import TestCaseDao
-from app.middleware.HttpClient import Request
+from app.dao.test_case.TestReport import TestReportDao
+from app.dao.test_case.TestResult import TestResultDao
+from app.middleware.AsyncHttpClient import AsyncRequest
+from app.models.constructor import Constructor
 from app.models.test_case import TestCase
 from app.utils.decorator import case_log
 from app.utils.gconfig_parser import StringGConfigParser, JSONGConfigParser, YamlGConfigParser
@@ -20,23 +25,32 @@ class Executor(object):
     # 需要替换全局变量的字段
     fields = ['body', 'url', 'request_header']
 
-    def __init__(self):
-        self._logger = list()
+    def __init__(self, log=None):
+        if log is None:
+            self._logger = list()
+            self._main = True
+        else:
+            self._logger = log
+            self._main = False
 
     @property
     def logger(self):
         return self._logger
 
-    @case_log
-    def parse_gconfig(self, data: TestCase, *fields):
-        """
-            解析全局变量
-        """
-        for f in fields:
-            self.parse_field(data, f)
+    # @staticmethod
+    def append(self, log_data, content):
+        log_data.append("[{}]: 步骤开始 -> {}".format(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), content))
 
     @case_log
-    def parse_field(self, data: TestCase, field):
+    async def parse_gconfig(self, data: TestCase, *fields):
+        """
+        解析全局变量
+        """
+        for f in fields:
+            await self.parse_field(data, f)
+
+    @case_log
+    async def parse_field(self, data: TestCase, field):
         """
         解析字段
         :param data:
@@ -49,7 +63,7 @@ class Executor(object):
             for v in variables:
                 key = v.split(".")[0]
                 # TODO 注意此处实时查询数据库，后续需要改成Redis
-                cf = GConfigDao.get_gconfig_by_key(key)
+                cf = await GConfigDao.async_get_gconfig_by_key(key)
                 if cf is not None:
                     # 解析变量
                     parse = Executor.get_parser(cf.key_type)
@@ -74,21 +88,106 @@ class Executor(object):
             return YamlGConfigParser.parse
         raise Exception(f"全局变量类型: {key_type}不合法, 请检查!")
 
-    def run(self, case_id: int):
+    # 新增解析参数的方法
+    async def parse_params(self, logger, data: TestCase, params: dict):
+        """替换变量"""
+        self.append(logger, "正在替换变量")
+        try:
+            for c in data.__table__.columns:
+                field_origin = getattr(data, c.name)
+                if not isinstance(field_origin, str):
+                    continue
+                variables = self.get_el_expression(field_origin)
+                for v in variables:
+                    key = v.split(".")
+                    if not params.get(key[0]):
+                        continue
+                    result = params
+                    for branch in key:
+                        if isinstance(branch, int):
+                            # 说明路径里面的是数组
+                            result = result[int(branch)]
+                        else:
+                            result = result.get(branch)
+                    if c.name != "request_header":
+                        new_value = json.dumps(result, ensure_ascii=False)
+                    else:
+                        new_value = result
+                        if new_value is None:
+                            self.append(logger, "替换变量失败, 找不到对应的数据")
+                            continue
+                    new_field = field_origin.replace("${%s}" % v, new_value)
+                    setattr(data, c.name, new_field)
+                    field_origin = new_field
+        except Exception as e:
+            Executor.log.error(f"替换变量失败, error: {str(e)}")
+            raise Exception(f"替换变量失败, error: {str(e)}")
+
+    # 新增获取构造数据和执行构造数据方法
+    @case_log
+    async def get_constructor(self, case_id):
+        """获取构造数据"""
+        return await TestCaseDao.async_select_constructor(case_id)
+
+    async def execute_constructors(self, logger, path, params, req_params, constructors: List[Constructor]):
+        """开始构造数据"""
+        if len(constructors) == 0:
+            self.append(logger, "构造方法为空, 跳出构造环节")
+        for i, c in enumerate(constructors):
+            await self.execute_constructor(logger, i, path, params, req_params, c)
+
+    async def execute_constructor(self, logger, index, path, params, req_params, constructor: Constructor):
+        if constructor.type == 0:
+            data = json.loads(constructor.constructor_json)
+            case_id = data.get("case_id")
+            testcase, _ = await TestCaseDao.async_query_test_case(case_id)
+            try:
+                self.append(logger, f"当前路径: {path}, 第{index + 1}条构造方法")
+                # 说明是case
+                executor = Executor(logger)
+                new_param = data.get("params")
+                if new_param:
+                    temp = json.loads(new_param)
+                    req_params.update(temp)
+                result, err = await executor.run(case_id, params, req_params, f"{path}->{testcase.name}")
+                if err:
+                    raise Exception(err)
+                params[constructor.value] = result
+                await self.parse_params(logger, testcase, params)
+            except Exception as e:
+                raise Exception(f"{path}->{testcase.name} 第{index + 1}个构造方法执行失败: {e}")
+
+    @case_log
+    async def run(self, case_id: int, params_pool: dict = None, request_param: dict = None, path="主case"):
         """
         开始执行测试用例
         """
         result = dict()
+        # 初始化case全局变量, 只存在于case生命周期 注意 它与全局变量不是一套逻辑
+        case_params = params_pool
+        if case_params is None:
+            case_params = dict()
+        req_params = request_param
+        if req_params is None:
+            req_params = dict()
         try:
-            case_info, err = TestCaseDao.query_test_case(case_id)
+            case_info, err = await TestCaseDao.async_query_test_case(case_id)
             if err:
                 return result, err
             # Step1: 替换全局变量
-            self.parse_gconfig(case_info, *Executor.fields)
-            # 获取断言
-            asserts, err = TestCaseAssertsDao.list_test_case_asserts(case_id)
+            await self.parse_gconfig(case_info, *Executor.fields)
+            # Step2: 获取构造数据
+            constructors = await self.get_constructor(case_id)
+            # Step3: 执行构造方法
+            await self.execute_constructors(self.logger, path, case_params, req_params, constructors)
+            # Step4: 获取断言
+            asserts, err = await TestCaseAssertsDao.async_list_test_case_asserts(case_id)
             if err:
                 return result, err
+            # Step5: 获取后置操作
+            # TODO
+            # Step6: 批量改写主方法参数
+            await self.parse_params(self.logger, case_info, case_params)
             if case_info.request_header != "":
                 headers = json.loads(case_info.request_header)
             else:
@@ -99,28 +198,88 @@ class Executor(object):
                 body = case_info.body
             else:
                 body = None
-            # request_obj = Request(case_info.url, headers=headers, data=body)
-            request_obj = Request(case_info.url, headers=headers, data=body.encode() if body is not None else body)
+
+            # Step5: 替换请求参数
+            body = self.replace_body(request_param, body)
+            # Step6: 完成http请求
+            if "form" not in headers['Content-Type']:
+                request_obj = AsyncRequest(case_info.url, headers=headers,
+                                           data=body.encode() if body is not None else body)
+            else:
+                if body is not None:
+                    body = json.loads(body)
+                request_obj = AsyncRequest(case_info.url, headers=headers, data=body)
             method = case_info.request_method.upper()
-            response_info = request_obj.request(method)
+            response_info = await request_obj.invoke(method)
             response_info["url"] = case_info.url
             response_info["request_method"] = method
             # 执行完成进行断言
             response_info["asserts"] = self.my_assert(asserts, response_info)
-            # 日志输出
-            response_info["logs"] = "\n".join(self.logger)
+            # # 日志输出
+            # response_info["logs"] = "\n".join(self.logger)
+            # 日志输出, 如果不是开头用例则不记录
+            if self._main:
+                response_info["logs"] = "\n".join(self.logger)
             print(response_info["logs"])
             return response_info, None
         except Exception as e:
             Executor.log.error(f"执行用例失败: {str(e)}")
             return result, f"执行用例失败: {str(e)}"
 
+    @classmethod
+    async def run_single(data, report_id, case_id, params_pool: dict = None, request_param: dict = None,
+                         path="主case"):
+        start_at = datetime.now()
+        executor = Executor()
+        result, err = await executor.run(case_id, params_pool, request_param, path)
+        finished_at = datetime.now()
+        cost = "{}s".format((finished_at - start_at).seconds)
+        if err is not None:
+            status = 2
+        else:
+            if result.get("status"):
+                status = 0
+            else:
+                status = 1
+        asserts = json.dumps(result.get("asserts"), ensure_ascii=False)
+        url = result.get("url")
+        case_logs = result.get("logs")
+        body = result.get("request_data")
+        status_code = result.get("status_code")
+        request_method = result.get("request_method")
+        response = result.get("response")
+        if not isinstance(response, str):
+            response = json.dumps(response, ensure_ascii=False)
+        response_headers = json.dumps(result.get("response_header"), ensure_ascii=False)
+        cookies = json.dumps(result.get("cookies"), ensure_ascii=False)
+        data[case_id] = status
+        await TestResultDao.insert(report_id, case_id, status,
+                                   case_logs, start_at, finished_at,
+                                   url, body, request_method, cost,
+                                   asserts, response_headers, response,
+                                   status_code, cookies, 0)
+
+    @case_log
+    def replace_body(self, req_params, body):
+        """根据传入的构造参数进行参数替换"""
+        try:
+            if body:
+                data = json.loads(body)
+                for k, v in req_params.items():
+                    if data.get(k) is not None:
+                        data[k] = v
+                return json.dumps(data, ensure_ascii=False)
+            self.append(self.logger, f"body为空, 不进行替换")
+        except Exception as e:
+            self.append(self.logger, f"替换请求body失败, {e}")
+        return body
+
     @staticmethod
     def get_time():
         return datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     @case_log
-    def my_assert(self, asserts: List, response_info)->dict:
+    def my_assert(self, asserts: List, response_info) -> dict:
         """
         断言验证
         :param asserts:
@@ -129,7 +288,7 @@ class Executor(object):
         """
         result = dict()
         if len(asserts) == 0:
-            self.logger.append("[{}]: 未设置断言, 用例结束".format(Executor.get_time()))
+            self.append(self.logger, "[{}]: 未设置断言, 用例结束".format(Executor.get_time()))
             return result
 
         for item in asserts:
@@ -215,3 +374,24 @@ class Executor(object):
         except Exception as e:
             return None, f"获取变量失败: {str(e)}"
         return json.dumps(result, ensure_ascii=False), None
+
+    @staticmethod
+    async def run_multiple(executor: int, env: int, case_list: List[int]):
+        # step1 新增测试报告数据
+        report_id = await TestReportDao.start(executor, env)
+
+        # step2 开始执行用例
+        result_data = dict()
+        await asyncio.gather(*(Executor.run_single(result_data, report_id, c) for c in case_list))
+        ok, fail, skip, error = 0, 0, 0, 0
+        for case_id, status in result_data.items():
+            if status == 0:
+                ok += 1
+            elif status == 1:
+                fail += 1
+            elif status == 2:
+                error += 1
+            else:
+                skip += 1
+        await TestReportDao.end(report_id, ok, fail, error, skip, 3)
+        return report_id

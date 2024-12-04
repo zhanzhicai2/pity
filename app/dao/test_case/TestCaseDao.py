@@ -1,9 +1,11 @@
 from collections import defaultdict
+from typing import List
 
 from sqlalchemy import desc
+from sqlalchemy.future import select
 
 from app.dao.test_case.TestCaseAssertsDao import TestCaseAssertsDao
-from app.models import Session, update_model
+from app.models import Session, update_model, async_session
 from app.models.constructor import Constructor
 from app.models.test_case import TestCase
 from app.routers.testcase.testcase_schema import TestCaseForm
@@ -106,12 +108,49 @@ class TestCaseDao(object):
             TestCaseDao.log.error(f"查询用例失败: {str(e)}")
             return None, f"查询用例失败: {str(e)}"
 
-    #
+    @staticmethod
+    async def async_query_test_case(case_id) -> [TestCase, str]:
+        try:
+            async with async_session() as session:
+                result = await session.execute(
+                    select(TestCase).where(TestCase.id == case_id, TestCase.deleted_at == None))
+                data = result.scalars().first()
+                if data is None:
+                    return None, "用例不存在"
+                return data, None
+        except Exception as e:
+            TestCaseDao.log.error(f"查询用例失败: {str(e)}")
+            return None, f"查询用例失败: {str(e)}"
 
+    # 通过项目查构造数据树
     @staticmethod
     def list_testcase_tree(projects) -> [List, dict]:
-
-
+        try:
+            result = []
+            project_map = {}
+            project_index = {}
+            for p in projects:
+                project_map[p.id] = p.name
+                result.append({
+                    "label": p.name,
+                    "value": p.id,
+                    "key": p.id,
+                    "children": [],
+                })
+                project_index[p.id] = len(result) - 1
+            with Session() as session:
+                data = session.query(TestCase).filter(TestCase.project_id.in_(project_map.keys()),
+                                                      TestCase.deleted_at == None).all()
+                for d in data:
+                    result[project_index[d.project_id]]["children"].append({
+                        "label": d.name,
+                        "value": d.id,
+                        "key": d.id,
+                    })
+                return result
+        except Exception as e:
+            TestCaseDao.log.error(f"获取用例列表失败: {str(e)}")
+            raise Exception("获取用例列表失败")
 
     # 根据case_id查询所有构造器方法
     @staticmethod
@@ -123,9 +162,25 @@ class TestCaseDao(object):
         """
         try:
             with Session() as session:
-                data = session.query(Constructor).filter_by(case_id=case_id,deleted_at = None).order_by(desc(Constructor.created_at)).all()
+                data = session.query(Constructor).filter_by(case_id=case_id, deleted_at=None).order_by(
+                    desc(Constructor.created_at)).all()
                 return data
         except Exception as e:
             TestCaseDao.log.error(f"查询构造数据失败: {str(e)}")
             raise Exception(f"查询构造数据失败")
 
+    @staticmethod
+    async def async_select_constructor(case_id: int):
+        """
+        异步获取用例构造数据
+        :param case_id:
+        :return:
+        """
+        try:
+            async with async_session() as session:
+                sql = select(Constructor).where(Constructor.case_id == case_id,
+                                                Constructor.deleted_at == None).order_by(Constructor.created_at)
+                data = await session.execute(sql)
+                return data.scalars().all()
+        except Exception as e:
+            TestCaseDao.log.error(f"查询构造数据失败: {str(e)}")

@@ -4,7 +4,9 @@
 # @Desc : 
 # @Date  :  2024/11/16
 from sqlalchemy import asc
-from app.models import Session
+from sqlalchemy import asc, select
+
+from app.models import Session, async_session
 from app.models.testcase_asserts import TestCaseAsserts
 from app.utils.logger import Log
 
@@ -19,6 +21,19 @@ class TestCaseAssertsDao(object):
                 case_list = session.query(TestCaseAsserts).filter_by(case_id=case_id, deleted_at=None).order_by(
                     asc(TestCaseAsserts.name)).all()
                 return case_list, None
+        except Exception as e:
+            TestCaseAssertsDao.log.error(f"获取用例断言失败: {str(e)}")
+            return [], f"获取用例断言失败: {str(e)}"
+
+    # 异步查询列表
+    @staticmethod
+    async def async_list_test_case_asserts(case_id: int):
+        try:
+            async with async_session() as session:
+                sql = select(TestCaseAsserts).where(TestCaseAsserts.case_id == case_id,
+                                                    TestCaseAsserts.deleted_at == None).order_by(TestCaseAsserts.name)
+                case_list = await session.execute(sql)
+                return case_list.scalars().all(), None
         except Exception as e:
             TestCaseAssertsDao.log.error(f"获取用例断言失败: {str(e)}")
             return [], f"获取用例断言失败: {str(e)}"
