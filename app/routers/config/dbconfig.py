@@ -7,6 +7,7 @@ from fastapi import Depends
 
 from app.dao.config.DbConfigDao import DbConfigDao
 from app.handler.fatcory import PityResponse
+from app.models import db_helper, DatabaseHelper
 from app.models.schema.database import DatabaseForm
 from app.routers import Permission
 from app.routers.config.environment import router
@@ -52,3 +53,20 @@ async def delete_dbconfig(id: int, user_info=Depends(Permission(Config.ADMIN))):
         return PityResponse.success()
     except Exception as e:
         return PityResponse.failed(e)
+
+
+# 编写在线测试方法
+@router.get("/dbconfig/connect")
+def connect_test(sql_type: int, host: str, port: int, username: str, password: str, database: str,
+                 user_info=Depends(Permission(Config.ADMIN))):
+    try:
+        data = db_helper.get_connection(sql_type, host, port, username, password,
+                                        database)
+        if data is None:
+            raise Exception("测试连接失败")
+        err = DatabaseHelper.test_connection(data.get("session"))
+        if err:
+            return PityResponse.failed(msg=err)
+        return PityResponse.success(msg="连接成功")
+    except Exception as e:
+        return PityResponse.failed(str(e))

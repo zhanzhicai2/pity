@@ -5,36 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c72a3621-16d1-42fa-bbb5-b40dfa541e7f" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/alembic/versions/0edf0a83b569_test1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/dao/config/DbConfigDao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/schema/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/schema/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/config/dbconfig.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/case_logger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/schema/online_sql.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routers/online/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routers/online/sql.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dao/config/DbConfigDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/config/DbConfigDao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dao/config/EnvironmentDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/config/EnvironmentDao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dao/config/GConfigDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/config/GConfigDao.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/test_case/TestReport.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/test_case/TestReport.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/test_case/TestResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/test_case/TestResult.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handler/fatcory.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/handler/fatcory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/middleware/AsyncHttpClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/middleware/AsyncHttpClient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/middleware/HttpClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/middleware/HttpClient.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/result.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/result.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/test_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/auth/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/auth/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/config/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/config/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/config/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/config/environment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/config/gconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/config/gconfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/project/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/project/project.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/testcase/testcase.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/testcase/testcase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/testcase/testcase_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/testcase/testcase_schema.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/decorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/decorator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/executor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/gconfig_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/gconfig_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/pity.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/pity.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/config/dbconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/config/dbconfig.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,7 +264,7 @@
       <workItem from="1724564577479" duration="90143000" />
       <workItem from="1725496119197" duration="1210000" />
       <workItem from="1725497367459" duration="416000" />
-      <workItem from="1731370482265" duration="115765000" />
+      <workItem from="1731370482265" duration="119386000" />
     </task>
     <task id="LOCAL-00001" summary="修复git练习">
       <created>1724218314075</created>
@@ -439,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733274635994</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="测试平台系列(50) 新增异步sql，新增测试报告等等">
+      <created>1733502495621</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1733502495621</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,7 +467,8 @@
     <MESSAGE value="测试平台系列(36) 使用全局变量" />
     <MESSAGE value="测试平台系列(42) 编写数据构造器功能（下）没有写完" />
     <MESSAGE value="测试平台系列(48) 新增测试报告功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试平台系列(48) 新增测试报告功能" />
+    <MESSAGE value="测试平台系列(50) 新增异步sql，新增测试报告等等" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试平台系列(50) 新增异步sql，新增测试报告等等" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -841,7 +830,7 @@
     <SUITE FILE_PATH="coverage/pity$gconfig_parser.coverage" NAME="gconfig_parser 覆盖结果" MODIFIED="1732614537657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/utils" />
     <SUITE FILE_PATH="coverage/pity$pity.coverage" NAME="pity 覆盖结果" MODIFIED="1731573079485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pity$app.coverage" NAME="run 覆盖结果" MODIFIED="1724362217649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pity$main.coverage" NAME="main 覆盖结果" MODIFIED="1733202013866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pity$main.coverage" NAME="main 覆盖结果" MODIFIED="1733502287528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pity$run.coverage" NAME="run 覆盖结果" MODIFIED="1725497469860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pity$config.coverage" NAME="config 覆盖结果" MODIFIED="1724058835991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
