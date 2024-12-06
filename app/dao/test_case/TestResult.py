@@ -17,20 +17,20 @@ class TestResultDao(object):
     log = Log("TestResultDao")
 
     @staticmethod
-    async def insert(report_id: int, case_id: int, status: int,
+    async def insert(report_id: int, case_id: int, status: int, case_name: str,
                      case_log: str, start_at: datetime, finished_at: datetime,
-                     url: str, body: str, request_method: str, cost: str,
+                     url: str, body: str, request_method: str, request_headers: str, cost: str,
                      asserts: str, response_headers: str, response: str,
                      status_code: int, cookies: str, retry: int = None, ) -> None:
         try:
             async with async_session() as session:
                 async with session.begin():
-                    report = PityTestResult(report_id, case_id, status,
+                    result = PityTestResult(report_id, case_id, status, case_name,
                                             case_log, start_at, finished_at,
-                                            url, body, request_method, cost,
+                                            url, body, request_method, request_headers, cost,
                                             asserts, response_headers, response,
                                             status_code, cookies, retry)
-                    session.add(report)
+                    session.add(result)
                     await session.flush()
         except Exception as e:
             TestResultDao.log.error(f"新增测试结果失败, error: {e}")

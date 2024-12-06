@@ -15,7 +15,7 @@ class TestCaseForm(BaseModel):
     name: str
     tag: str = None
     body: str = None
-    request_header: str = None
+    request_headers: str = None
     request_method: str = None
     status: int
     project_id: int

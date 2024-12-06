@@ -34,8 +34,24 @@ class TestReportDao(object):
             raise Exception("新增报告失败")
 
     @staticmethod
+    async def update(report_id: int, status) -> None:
+        try:
+            async with async_session() as session:
+                async with session.begin():
+                    sql = select(PityReport).where(PityReport.id == report_id)
+                    data = await session.execute(sql)
+                    report = data.scalars().first()
+                    if report is None:
+                        raise Exception("更新报告失败")
+                    report.status = status
+                    await session.flush()
+        except Exception as e:
+            TestReportDao.log.error(f"更新报告失败, error: {e}")
+            raise Exception("更新报告失败")
+
+    @staticmethod
     async def end(report_id: int, success_count: int, failed_count: int,
-                  error_count: int, skipped_count: int, status: int) -> None:
+                  error_count: int, skipped_count: int, status: int, cost: str) -> None:
         try:
             async with async_session() as session:
                 async with session.begin():
@@ -49,6 +65,7 @@ class TestReportDao(object):
                     report.failed_count = failed_count
                     report.error_count = error_count
                     report.skipped_count = skipped_count
+                    report.cost = cost
                     report.finished_at = datetime.now()
                     await session.flush()
         except Exception as e:
@@ -74,3 +91,31 @@ class TestReportDao(object):
         except Exception as e:
             TestReportDao.log.error(f"查询报告失败: {e}")
             raise Exception(f"查询报告失败: {e}")
+
+    @staticmethod
+    async def list_report(page: int, size: int, start_time: str, end_time: str, executor: int = None):
+        """
+        获取报告列表
+        :param size:
+        :param page:
+        :param end_time:
+        :param start_time:
+        :param executor:
+        :return:
+        """
+        try:
+            async with async_session() as session:
+                sql = select(PityReport).where(PityReport.start_at.between(start_time, end_time)).order_by(
+                    desc(PityReport.start_at))
+                if executor is not None:
+                    sql = sql.where(PityReport.executor == executor)
+                data = await session.execute(sql)
+                total = data.raw.rowcount
+                if total == 0:
+                    return [], 0
+                sql = sql.offset((page - 1) * size).limit(size)
+                data = await session.execute(sql)
+                return data.scalars().all(), total
+        except Exception as e:
+            TestReportDao.log.error(f"查询构建记录失败: {e}")
+            raise Exception(f"查询构建记录失败: {e}")

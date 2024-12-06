@@ -170,7 +170,7 @@ class TestCaseDao(object):
             raise Exception(f"查询构造数据失败")
 
     @staticmethod
-    async def async_select_constructor(case_id: int):
+    async def async_select_constructor(case_id: int) -> List[Constructor]:
         """
         异步获取用例构造数据
         :param case_id:
@@ -184,3 +184,59 @@ class TestCaseDao(object):
                 return data.scalars().all()
         except Exception as e:
             TestCaseDao.log.error(f"查询构造数据失败: {str(e)}")
+
+    @staticmethod
+    async def collect_data(case_id: int, data: List):
+        """
+        收集以case_id为前置条件的数据(后置暂时不支持)
+        :param data:
+        :param case_id:
+        :return:
+        """
+        # 先获取数据构造器（前置条件）
+        pre = dict(id=f"pre_{case_id}", label="前置条件", children=list())
+        await TestCaseDao.collect_constructor(case_id, pre)
+        data.append(pre)
+        # 获取断言
+        asserts = dict(id=f"asserts_{case_id}", label="断言", children=list())
+        await TestCaseDao.collect_asserts(case_id, asserts)
+        data.append(asserts)
+
+    @staticmethod
+    async def collect_constructor(case_id, parent):
+        constructors = await TestCaseDao.async_select_constructor(case_id)
+        for c in constructors:
+            temp = dict(id=f"constructor_{c.id}", label=f"{c.name}", children=list())
+            if c.type == 0:
+                # 说明是用例，继续递归
+                temp["label"] = "[CASE]: " + temp["label"]
+                json_data = json.loads(c.constructor_json)
+                await TestCaseDao.collect_data(json_data.get("case_id"), temp.get("children"))
+            elif c.type == 1:
+                temp["label"] = "[SQL]: " + temp["label"]
+            elif c.type == 2:
+                temp["label"] = "[REDIS]: " + temp["label"]
+            # 否则正常添加数据
+            parent.get("children").append(temp)
+
+    @staticmethod
+    async def collect_asserts(case_id, parent):
+        asserts, err = await TestCaseAssertsDao.async_list_test_case_asserts(case_id)
+        if err:
+            raise Exception("获取断言数据失败")
+        for a in asserts:
+            temp = dict(id=f"assert_{a.id}", label=f"{a.name}", children=list())
+            parent.get("children").append(temp)
+
+    @staticmethod
+    async def get_xmind_data(case_id: int):
+        result = dict()
+        data, err = TestCaseDao.query_test_case(case_id)
+        if err:
+            raise Exception(err)
+        # 开始解析测试数据
+        result.update(dict(id=f"case_{case_id}", label=f"{data.name}({data.id})"))
+        children = list()
+        await TestCaseDao.collect_data(case_id, children)
+        result["children"] = children
+        return result

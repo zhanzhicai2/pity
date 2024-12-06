@@ -542,3 +542,27 @@ WHERE pity_user.username = %(username_1)s AND pity_user.password = %(password_1)
 (Background on this error at: http://sqlalche.me/e/14/gkpj)
 [2024-11-29 13:57:16.453470] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
 [2024-11-29 13:57:22.286539] ERROR: UserDao: 执行用例失败: 'NoneType' object is not callable
+[2024-12-05 16:32:39.364519] ERROR: UserDao: 查询报告失败: (pymysql.err.OperationalError) (1054, "Unknown column 'pity_report.executor' in 'field list'")
+[SQL: SELECT pity_report.id, pity_report.executor, pity_report.env, pity_report.plan_id, pity_report.start_at, pity_report.finished_at, pity_report.success_count, pity_report.error_count, pity_report.failed_count, pity_report.skipped_count, pity_report.`status`, pity_report.`mode`, pity_report.deleted_at 
+FROM pity_report 
+WHERE pity_report.id = %s]
+[parameters: (1,)]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+[2024-12-05 16:32:52.727718] ERROR: UserDao: 查询报告失败: (pymysql.err.OperationalError) (1054, "Unknown column 'pity_report.executor' in 'field list'")
+[SQL: SELECT pity_report.id, pity_report.executor, pity_report.env, pity_report.plan_id, pity_report.start_at, pity_report.finished_at, pity_report.success_count, pity_report.error_count, pity_report.failed_count, pity_report.skipped_count, pity_report.`status`, pity_report.`mode`, pity_report.deleted_at 
+FROM pity_report 
+WHERE pity_report.id = %s]
+[parameters: (1,)]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+[2024-12-05 16:34:32.729640] ERROR: UserDao: 查询报告失败: (pymysql.err.OperationalError) (1054, "Unknown column 'pity_report.executor' in 'field list'")
+[SQL: SELECT pity_report.id, pity_report.executor, pity_report.env, pity_report.plan_id, pity_report.start_at, pity_report.finished_at, pity_report.success_count, pity_report.error_count, pity_report.failed_count, pity_report.skipped_count, pity_report.`status`, pity_report.`mode`, pity_report.deleted_at 
+FROM pity_report 
+WHERE pity_report.id = %s]
+[parameters: (1,)]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+[2024-12-05 16:47:16.173646] ERROR: UserDao: 查询报告失败: (pymysql.err.OperationalError) (1054, "Unknown column 'pity_report.executor' in 'field list'")
+[SQL: SELECT pity_report.id, pity_report.executor, pity_report.env, pity_report.plan_id, pity_report.start_at, pity_report.finished_at, pity_report.success_count, pity_report.error_count, pity_report.failed_count, pity_report.skipped_count, pity_report.`status`, pity_report.`mode`, pity_report.deleted_at 
+FROM pity_report 
+WHERE pity_report.id = %s]
+[parameters: (1,)]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
