@@ -7,10 +7,9 @@
     <list default="true" id="c72a3621-16d1-42fa-bbb5-b40dfa541e7f" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dao/config/DbConfigDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/config/DbConfigDao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/config/EnvironmentDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/config/EnvironmentDao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/config/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/config/environment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/handler/fatcory.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/handler/fatcory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routers/online/sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/online/sql.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +258,7 @@
       <workItem from="1724564577479" duration="90143000" />
       <workItem from="1725496119197" duration="1210000" />
       <workItem from="1725497367459" duration="416000" />
-      <workItem from="1731370482265" duration="121743000" />
+      <workItem from="1731370482265" duration="122338000" />
     </task>
     <task id="LOCAL-00001" summary="修复git练习">
       <created>1724218314075</created>
@@ -429,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733524437009</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="测试平台系列(51) 新增数据库查询数据表接口">
+      <created>1733643959976</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1733643959976</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,7 +477,8 @@
     <MESSAGE value="测试平台系列(48) 新增测试报告功能" />
     <MESSAGE value="测试平台系列(50) 新增异步sql，新增测试报告等等" />
     <MESSAGE value="测试平台系列(51) 新增sql管理相关接口，在线测试sql等" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试平台系列(51) 新增sql管理相关接口，在线测试sql等" />
+    <MESSAGE value="测试平台系列(51) 新增数据库查询数据表接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试平台系列(51) 新增数据库查询数据表接口" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
