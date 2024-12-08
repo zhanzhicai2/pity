@@ -48,9 +48,10 @@ class EnvironmentDao(object):
 
     # 查询
     @staticmethod
-    def list_env(page, size, name=None):
+    def list_env(page, size, name=None, exactly=False):
         """
         获取环境列表的静态方法。
+        :param exactly:
         :param page: 当前页码（整数）。
         :param size: 每页显示的记录数（整数）。
         :param name: 环境名称的过滤条件（可选字符串）。
@@ -62,6 +63,8 @@ class EnvironmentDao(object):
             with Session() as session:
                 if name:
                     search.append(Environment.name.ilike("%{}%".format(name)))
+                if exactly:
+                    return session.query(Environment).filter(*search).all()
                 data = session.query(Environment).filter(*search)
                 total = data.count()
                 return data.order_by(desc(Environment.created_at)).offset((page - 1) * size).limit(

@@ -13,4 +13,4 @@ aiohttp
 aiomysql
 aiofiles
 Jinja2
-
+psycopg2-binary
