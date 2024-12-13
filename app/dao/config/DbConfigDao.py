@@ -47,9 +47,9 @@ class DbConfigDao(object):
 
     # 新增 insert
     @staticmethod
-    async def update_database(data: DatabaseForm, user: str):
+    async def insert_database(data: DatabaseForm, user: str):
         try:
-            async with async_session as session:
+            async with async_session() as session:
                 async with session.begin():
                     result = await session.execute(
                         select(PityDatabase).where(PityDatabase.name == data.name, PityDatabase.deleted_at == None,
@@ -66,7 +66,7 @@ class DbConfigDao(object):
     @staticmethod
     async def update_database(data: DatabaseForm, user: str):
         try:
-            async with async_session as session:
+            async with async_session() as session:
                 async with session.begin():
                     result = await session.execute(select(PityDatabase).where(data.id == PityDatabase.id))
                     query = result.scalars().first()
@@ -82,7 +82,7 @@ class DbConfigDao(object):
     @staticmethod
     async def delete_database(id: int, user: str):
         try:
-            async with async_session as session:
+            async with async_session() as session:
                 async with session.begin():
                     result = await session.execute(
                         select(PityDatabase).where(id == PityDatabase.id, PityDatabase.deleted_at == None))

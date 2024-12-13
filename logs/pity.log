@@ -566,3 +566,19 @@ FROM pity_report
 WHERE pity_report.id = %s]
 [parameters: (1,)]
 (Background on this error at: http://sqlalche.me/e/14/e3q8)
+[2024-12-09 13:31:40.820745] ERROR: UserDao: 查询数据库配置失败, error: 未找到对应的数据库配置
+[2024-12-09 13:31:53.368228] ERROR: UserDao: 查询数据库配置失败, error: 未找到对应的数据库配置
+[2024-12-09 13:31:58.246773] ERROR: UserDao: 查询数据库配置失败, error: 未找到对应的数据库配置
+[2024-12-09 13:33:48.068249] ERROR: UserDao: 查询数据库配置失败, error: 未找到对应的数据库配置
+[2024-12-09 13:40:16.278305] ERROR: UserDao: 新增数据库配置: fat失败, __aenter__
+[2024-12-09 13:40:20.813952] ERROR: UserDao: 新增数据库配置: fat失败, __aenter__
+[2024-12-09 13:40:52.755123] ERROR: UserDao: 新增数据库配置: fat失败, __aenter__
+[2024-12-09 13:41:27.349620] ERROR: UserDao: 新增数据库配置: fat失败, __aenter__
+[2024-12-09 13:42:04.661123] ERROR: UserDao: 新增数据库配置: fat失败, __aenter__
+[2024-12-09 13:46:30.942889] ERROR: UserDao: 新增数据库配置: fat失败, __aenter__
+[2024-12-09 13:54:00.872794] ERROR: UserDao: 新增数据库配置: fat失败, __aenter__
+[2024-12-09 13:54:02.878153] ERROR: UserDao: 新增数据库配置: fat失败, __aenter__
+[2024-12-09 13:54:07.934416] ERROR: UserDao: 新增数据库配置: fat失败, __aenter__
+[2024-12-09 13:54:16.476103] ERROR: UserDao: 新增数据库配置: fat失败, __aenter__
+[2024-12-09 14:04:26.183240] ERROR: UserDao: 新增数据库配置: fat失败, __aenter__
+[2024-12-09 14:05:59.003005] ERROR: UserDao: 新增数据库配置: fat失败, __aenter__
