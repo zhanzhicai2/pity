@@ -5,12 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c72a3621-16d1-42fa-bbb5-b40dfa541e7f" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/gunicorn.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supervisor.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/testjson.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dao/test_case/TestCaseDirectory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/schema/testcase_directory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/test_case_directory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/config/DbConfigDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/config/DbConfigDao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dao/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dao/project/ProjectDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/project/ProjectDao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dao/test_case/ConstructorDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/test_case/ConstructorDao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/result.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/result.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/schema/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/schema/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/test_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/project/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/project/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/testcase/testcase.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/testcase/testcase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/testcase/testcase_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/testcase/testcase_schema.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/pity.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/pity.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supervisor.conf" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +271,8 @@
       <workItem from="1725496119197" duration="1210000" />
       <workItem from="1725497367459" duration="416000" />
       <workItem from="1731370482265" duration="135341000" />
-      <workItem from="1734073680215" duration="352000" />
+      <workItem from="1734073680215" duration="6714000" />
+      <workItem from="1734422017354" duration="13799000" />
     </task>
     <task id="LOCAL-00001" summary="修复git练习">
       <created>1724218314075</created>
@@ -444,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733644667695</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="新增sql在线执行接口，修复连接池，支持autocommit2">
+      <created>1734074047408</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1734074047408</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,7 +482,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="修复git练习" />
     <MESSAGE value="修正&lt;修复git练习&gt;" />
     <MESSAGE value="测试平台系列(18) 项目用例表设计和权限改造-添加配置项" />
     <MESSAGE value="测试平台系列(18) 项目用例表设计和权限改造-添加配置项&#10;自己修改了role的取值跟传值，测试是有问题的，但是为了不耽搁学习，暂时先这样" />
@@ -488,7 +506,8 @@
     <MESSAGE value="测试平台系列(51) 新增sql管理相关接口，在线测试sql等" />
     <MESSAGE value="测试平台系列(51) 新增数据库查询数据表接口" />
     <MESSAGE value="新增sql在线执行接口，修复连接池，支持autocommit" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增sql在线执行接口，修复连接池，支持autocommit" />
+    <MESSAGE value="新增sql在线执行接口，修复连接池，支持autocommit2" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增sql在线执行接口，修复连接池，支持autocommit2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -719,12 +738,12 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py</url>
-          <line>65</line>
+          <line>74</line>
           <option name="timeStamp" value="156" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/dao/test_case/TestCaseDao.py</url>
-          <line>69</line>
+          <line>78</line>
           <option name="timeStamp" value="157" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -842,45 +861,50 @@
           <line>6</line>
           <option name="timeStamp" value="197" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/dao/config/DbConfigDao.py</url>
           <line>49</line>
           <option name="timeStamp" value="198" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/dao/config/DbConfigDao.py</url>
           <line>51</line>
           <option name="timeStamp" value="199" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/dao/config/DbConfigDao.py</url>
           <line>61</line>
           <option name="timeStamp" value="200" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test/testjson.py</url>
           <line>12</line>
           <option name="timeStamp" value="201" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test/testjson.py</url>
           <line>17</line>
           <option name="timeStamp" value="202" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test/testjson.py</url>
           <line>27</line>
           <option name="timeStamp" value="203" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test/testjson.py</url>
           <line>108</line>
           <option name="timeStamp" value="205" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test/testjson.py</url>
           <line>109</line>
           <option name="timeStamp" value="206" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="219" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -891,7 +915,7 @@
     <SUITE FILE_PATH="coverage/pity$testjson.coverage" NAME="testjson 覆盖结果" MODIFIED="1733810827634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pity$pity.coverage" NAME="pity 覆盖结果" MODIFIED="1731573079485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pity$app.coverage" NAME="run 覆盖结果" MODIFIED="1724362217649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pity$main.coverage" NAME="main 覆盖结果" MODIFIED="1734073787586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pity$main.coverage" NAME="main 覆盖结果" MODIFIED="1734432268020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pity$run.coverage" NAME="run 覆盖结果" MODIFIED="1734072616607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pity$config.coverage" NAME="config 覆盖结果" MODIFIED="1724058835991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

@@ -68,4 +68,4 @@ async def get_site(filename):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app='main:pity', host='0.0.0.0', port=7777, reload=True)
+    uvicorn.run(app='main:pity', host='127.0.0.1', port=7777, reload=True)

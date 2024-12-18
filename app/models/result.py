@@ -7,6 +7,8 @@ from datetime import datetime
 from sqlalchemy import INT, Column, DATETIME, String
 from sqlalchemy import SMALLINT
 from sqlalchemy import TEXT
+from sqlalchemy.dialects.mysql import LONGTEXT
+
 from app.models import Base
 
 
@@ -37,7 +39,7 @@ class PityTestResult(Base):
     cost = Column(String(12), nullable=False)
     asserts = Column(TEXT)
     response_headers = Column(TEXT)
-    response = Column(TEXT)
+    response = Column(LONGTEXT)
     cookies = Column(TEXT)
     deleted_at = Column(DATETIME, index=True)
 

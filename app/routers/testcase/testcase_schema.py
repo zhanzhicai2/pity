@@ -18,10 +18,10 @@ class TestCaseForm(BaseModel):
     request_headers: str = None
     request_method: str = None
     status: int
-    project_id: int
+    directory_id: int
     request_type: int
 
-    @validator("catalogue", "priority", "status", "project_id", "request_type", "url", "name")
+    @validator("priority", "status", "directory_id", "request_type", "url", "name")
     def name_not_empty(cls, v):
         if isinstance(v, str) and len(v.strip()) == 0:
             raise ParamsError("不能为空")

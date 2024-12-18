@@ -582,3 +582,18 @@ WHERE pity_report.id = %s]
 [2024-12-09 13:54:16.476103] ERROR: UserDao: 新增数据库配置: fat失败, __aenter__
 [2024-12-09 14:04:26.183240] ERROR: UserDao: 新增数据库配置: fat失败, __aenter__
 [2024-12-09 14:05:59.003005] ERROR: UserDao: 新增数据库配置: fat失败, __aenter__
+[2024-12-13 16:00:48.085120] ERROR: UserDao: 解析JSON全局变量异常: Expecting property name enclosed in double quotes: line 5 column 1 (char 79)
+[2024-12-13 16:00:48.102641] ERROR: UserDao: 查询全局变量失败, error: replace() argument 2 must be str, not None
+[2024-12-13 16:00:48.102777] ERROR: UserDao: 执行用例失败: replace() argument 2 must be str, not None
+[2024-12-13 16:01:06.281285] ERROR: UserDao: 查询全局变量失败, error: expected string or bytes-like object
+[2024-12-13 16:01:06.281425] ERROR: UserDao: 执行用例失败: expected string or bytes-like object
+[2024-12-17 18:45:05.584377] ERROR: UserDao: 创建目录失败, error: 目录已存在
+[2024-12-17 19:06:36.959909] ERROR: UserDao: 创建目录失败, error: 目录已存在
+[2024-12-17 19:08:41.867250] ERROR: UserDao: 更新目录失败, error: 目录不存在
+[2024-12-17 19:09:42.644884] ERROR: UserDao: 更新目录失败, error: 目录不存在
+[2024-12-17 19:14:08.824571] ERROR: UserDao: 更新目录失败, error: 'int' object has no attribute 'id'
+[2024-12-17 19:14:19.921703] ERROR: UserDao: 更新目录失败, error: 'int' object has no attribute 'id'
+[2024-12-17 19:16:59.889841] ERROR: UserDao: 更新目录失败, error: 'int' object has no attribute 'id'
+[2024-12-17 19:17:01.329608] ERROR: UserDao: 更新目录失败, error: 'int' object has no attribute 'id'
+[2024-12-17 19:17:02.214315] ERROR: UserDao: 更新目录失败, error: 'int' object has no attribute 'id'
+[2024-12-17 19:17:52.288638] ERROR: UserDao: 删除目录失败, error: 目录不存在
